@@ -13,15 +13,15 @@
 
       <div id="page">
         <div id="chat-list">
-            <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
+            <a href="/users/@me" class="user" translate="no"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
             <ul class="chat-list scroll-hijack">
                     <% channel.participant.forEach(function(participant){ %>
                         <%if(participant._id.equals(currentUser._id)){ %>
                         <% }else if(participant.online === false){ %>
-                            <li><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" /></div><del><%= participant.username %></del></a></li>
+                            <li translate="no"><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" /></div><del><%= participant.username %></del></a></li>
               
                         <% }else if(participant.online === true){ %>
-                            <li><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" /></div><%= participant.username %></a></li>
+                            <li translate="no"><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" /></div><%= participant.username %></a></li>
 
                         <% }else{ %>
               <li><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" /></div><%= participant.username %></li></li></a>
@@ -72,9 +72,13 @@
               <i class="fas fa-moon"></i>
             </button>
             <div class="dropup">
-              <button style="background-color: CadetBlue" class="btn btn-primary btn-radius" data-toggle="tooltip" data-placement="right" title="View additional options">h</button>
+              <button style="background-color: CadetBlue" class="btn btn-primary btn-radius" data-toggle="tooltip" data-placement="right" title="translate page"><i class="fas fa-language"></i></button>
               <div class="dropup-content">
-                <p>h</p>
+                <script type="text/javascript">
+                  function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                  }
+                </script>
                 <div id="google_translate_element"></div>
               </div>
             </div>
@@ -82,7 +86,7 @@
         </div>
         </div>
         <div id="chat" class="page">
-            <div class="page-header clearfix">
+            <div class="page-header clearfix" translate="no">
                   <span><%= channel.channel_name %></span>
                 <ul>
                     <!-- <li><a title="Online" href="#">Online - 1</a></li> -->
