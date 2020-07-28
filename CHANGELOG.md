@@ -8,4 +8,4 @@ __________________________________
 
 **Version 4:**
 <pre>4/28: 17lwinn, created CHANGELOG.md</pre>
-<pre>4/28: 17lwinn, changed chat.ejs: added dropup</pre>
+<pre>4/28: 17lwinn, changed chat.ejs: added dropup/translate</pre>

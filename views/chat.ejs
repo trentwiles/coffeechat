@@ -12,9 +12,9 @@
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
       <div id="page">
-        <div id="chat-list">
-            <a href="/users/@me" class="user" translate="no"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
-            <ul class="chat-list scroll-hijack">
+        <div id="chat-list" translate="no">
+            <a href="/users/@me" class="user" translate="no"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div translate="no"><%= currentUser.username %></a>
+            <ul class="chat-list scroll-hijack" translate="no">
                     <% channel.participant.forEach(function(participant){ %>
                         <%if(participant._id.equals(currentUser._id)){ %>
                         <% }else if(participant.online === false){ %>
@@ -28,7 +28,7 @@
                         <% } %>
                     <% }); %>
             </ul>
-        <div id="chat-options" style="position: fixed; bottom: 0;">
+        <div id="chat-options" style="position: fixed; bottom: 0;" translate="no">
           <center>
             <!-- video chat code -->
             <a target="_blank" href="https://glitchchord-beta.glitch.me">
