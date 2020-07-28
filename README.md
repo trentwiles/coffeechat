@@ -1,37 +1,45 @@
-Welcome to Glitch
-=================
+# welcome to glitchchord (glitchcord, glitchchord idk)
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+-------------
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+<b>The free and open-source discord clone powered by socket.io, mongodb, ejs and express</b>
 
-Find out more [about Glitch](https://glitch.com/about).
+-------------
 
+1. **protected**
 
-Your Project
+- No data such as credentials are held onsite, they are transported to the mongodb cluster and all passwords are encrypted with Bcrypt
+
+2. **simple to setup**
+
+- just change the values in .env to get started!
+
+3. **open-source!**
+
+- unlike discord, this version is open source and free like discord!
+
+4. **fast**
+
+- we use defresh to load our pages fast, and with no complications!
+
 ------------
 
-### ← README.md
+This was based off [minicord](https://github.com/ThalKod/discord-clone)- by Thalkod
 
-That's this file, where you can tell people what your cool website does and how you built it.
+----------
 
-### ← index.html
+**is this causing issues? if so delete it at your own risk!**
+```js
+// app.js
+function checkHttps(req, res, next){
+  // protocol check, if http, redirect to https
+  
+  if(req.get('X-Forwarded-Proto').indexOf("https")!=-1){
+    return next()
+  } else {
+    res.redirect('https://' + req.hostname + req.url);
+  }
+}
 
-Where you'll write the content of your website. 
-
-### ← style.css
-
-CSS files add styling rules to your content.
-
-### ← script.js
-
-If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+app.all('*', checkHttps);
+```
