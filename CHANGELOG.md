@@ -4,6 +4,8 @@ All developers must write what changes they made to [glitchchord-app](https://gl
 <br>
 <code>date | user | changes</code>
 
-------------
-Version 4:
+__________________________________
+
+**Version 4:**
 <pre>4/28: 17lwinn, created CHANGELOG.md</pre>
+<pre>4/28: 17lwinn, changed chat.ejs: added dropup</pre>
