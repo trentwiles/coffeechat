@@ -1,3 +1,6 @@
+I think there should me more customization when making 
+
+
 There should be 3 levels of admin
 
 - contributor
