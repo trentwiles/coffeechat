@@ -55,7 +55,7 @@ const commands = {
     }),
   dog: args =>
     socket.emit("createdMessage", { userID, channelID, message: " ▼・ᴥ・▼" }),
-  leave: args => location.replace("/users/@me"),
+  leave: args => defresh("/users/@me", "replace"),
   tableflip: args =>
     socket.emit("createdMessage", {
       userID,
