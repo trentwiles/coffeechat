@@ -2,6 +2,7 @@
 const socket = io();
 const chatList = $("#chat-list ul");
 const username = $("#chat-list a");
+var defresh;
 function isSiteOnline() {
   var MrChecker = new XMLHttpRequest(),
     CheckThisUrl = "//glitchchord.glitch.me";
@@ -37,11 +38,11 @@ function isSiteOnline() {
 }
 
 const emotes = {
-  'happy:': args =>
+  "happy:": args =>
     socket.emit("createdMessage", { userID, channelID, message: "😃" }),
-  'sob:': args =>
+  "sob:": args =>
     socket.emit("createdMessage", { userID, channelID, message: "😭" }),
-  'glitch:': args =>
+  "glitch:": args =>
     socket.emit("createdMessage", { userID, channelID, message: "🎏" })
 };
 
@@ -91,7 +92,7 @@ socket.on("connect", function() {
   socket.emit("join", params, function(err) {
     if (err) {
       alert(err);
-      window.location.href = "/";
+      defresh("/", "push");
     } else {
       console.log("No Error");
     }
