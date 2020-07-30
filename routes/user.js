@@ -71,12 +71,14 @@ router.get("/@me", middleware.isLogedIn, (req, res) => {
       res.render("profile", { channels: rUser.channels, title: "username" });
     })
     .catch(e => {
-      res.send(e);
+      console.log(e);
+      res.send(e); // TODO: Debug this `e` parameter.
     });
 });
 
 // external user Profile
-router.get("/:id", middleware.isLogedIn, (req, res) => {
+router.get("/:id", middleware.isLogedIn, (req, res, next) => { // TODO: Find out whether or not this route is causing errors with /@me
+  if (req.param.id === "@me") return next();
   User.findById(req.user._id)
     .populate("channels")
     .then(currentUser => {
@@ -106,7 +108,6 @@ router.patch("/@me/update", middleware.isLogedIn, (req, res) => {
       res.redirect("/users/@me");
     })
     .catch(e => {
-      console.log(e);
       return res.redirect("/user/@me");
     });
 });

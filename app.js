@@ -50,7 +50,7 @@ mongoose.Promise = global.Promise;
 
 // boot if db is available
 mongoose
-  .connect(config.dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(config.dbURL, { useNewUrlParser: true, useUnifiedTopology: true }) // TODO: Debug why `createIndexes` is not supported on Glitch.
   .then(() => {
     // boot
     server.listen(config.port, () => {
@@ -66,7 +66,7 @@ mongoose
 
 // Passport configuration
 app.use(
-  expressSession({
+  expressSession({ // TODO: Stop using this module.. @ihack2712 will implement tokens at some point in time.
     secret: "a4fw8542071f-c33873-443447-8ee2321",
     resave: false,
     saveUninitialized: false
