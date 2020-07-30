@@ -99,6 +99,7 @@ router.get("/:id", middleware.isLogedIn, (req, res, next) => {
           }
         })
         .catch(e => {
+          // This is why the /@me page isn't working.
           console.log("I think this is the mother fucking bug....");
           res.send(e);
         });
