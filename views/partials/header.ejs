@@ -101,7 +101,7 @@
                       <span>Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
                       <div class="dropdown-content">
                         <a href="/users/logout"><p style="color: black"><i class="fas fa-sign-out-alt"></i>     sign out</p></a>
-                        <a href="/users/@me"><p style="color: black"><i class="fas fa-user"></i>     profile</p></a>
+                        <a href="/joystick"><p style="color: black"><i class="fas fa-gamepad"></i>     joystick gaming</p></a>
                         <% if (currentUser.admin === true){  %>
                           <hr>
                           <small style="color: black">Admin controls</small>
