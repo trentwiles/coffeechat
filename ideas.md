@@ -11,5 +11,5 @@ There should be 3 levels of admin
 Iframe the video call app so it's in the site
 
 ---
-next update: 
+next update: make video call app an iframe
 
