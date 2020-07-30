@@ -46,6 +46,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(cookieParser());
 app.set("view engine", "ejs");
+
+//
+// Why is this done?
+//
 mongoose.Promise = global.Promise;
 
 // boot if db is available
@@ -74,7 +78,7 @@ app.use(
 );
 
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session()); // TODO: Stop using server sessions. That eats up memory.
 
 // Login Strategy
 passport.use(
@@ -110,6 +114,7 @@ passport.serializeUser((user, done) => {
 // used to deserialize the user
 passport.deserializeUser((id, done) => {
   User.findById(id, (err, user) => {
+    console.log(user.email) // FIXME: Remove this line when bug is fixed.
     done(err, user);
   });
 });

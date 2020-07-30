@@ -79,6 +79,7 @@ router.get("/@me", middleware.isLogedIn, (req, res) => {
 
 // external user Profile
 router.get("/:id", middleware.isLogedIn, (req, res, next) => {
+  console.log(req.param.id); // TODO: When fixed bug, remove this line.
   if (req.param.id === "@me") return next();
   User.findById(req.user._id)
     .populate("channels")
@@ -98,6 +99,7 @@ router.get("/:id", middleware.isLogedIn, (req, res, next) => {
           }
         })
         .catch(e => {
+          console.log("I think this is the mother fucking bug....");
           res.send(e);
         });
     });
