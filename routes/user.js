@@ -65,6 +65,7 @@ router.get("/delete", (req, res) => {
 
 // Users Profile
 router.get("/@me", middleware.isLogedIn, (req, res) => {
+  console.log("/@me") // TODO: Find out why this one isn't logging.
   User.findById(req.user._id)
     .populate("channels")
     .then(rUser => {
@@ -72,12 +73,12 @@ router.get("/@me", middleware.isLogedIn, (req, res) => {
     })
     .catch(e => {
       console.log(e);
-      res.send(e); // TODO: Debug this `e` parameter.
+      res.send(e);
     });
 });
 
 // external user Profile
-router.get("/:id", middleware.isLogedIn, (req, res, next) => { // TODO: Find out whether or not this route is causing errors with /@me
+router.get("/:id", middleware.isLogedIn, (req, res, next) => {
   if (req.param.id === "@me") return next();
   User.findById(req.user._id)
     .populate("channels")

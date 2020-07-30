@@ -4,6 +4,7 @@ const User = require("../models/user");
 
 const middleware = {};
 
+// TODO: Someone has to fix this type, please... `isLoggedin`
 middleware.isLogedIn = (req, res, next)=>{
     if(req.isAuthenticated()){
         next();
