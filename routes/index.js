@@ -18,7 +18,11 @@ router.get("/", (req, res)=>{
 });
 
 router.get("/joystick", (req, res)=>{
-  res.render('joystick',{title:"joystick"}) 
+  if(req.user){
+    res.render('joystick',{title:"joystick"}) 
+  }else{
+    res.redirect("/users/login")
+  }
 })
 
 module.exports = router;
