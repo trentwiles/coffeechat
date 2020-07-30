@@ -116,8 +116,5 @@ router.patch("/@me/update", middleware.isLogedIn, (req, res) => {
     });
 });
 
-router.get("/joystick", (req, res)=>{
-  res.render("joystick", { title: "Joystick gaming" });
-})
 
 module.exports = router;

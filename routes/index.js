@@ -17,4 +17,8 @@ router.get("/", (req, res)=>{
     }
 });
 
+router.get("/joystick", (req, res)=>{
+  res.render('joystick',{title:"joystick"}) 
+})
+
 module.exports = router;
