@@ -4,6 +4,7 @@ const Game = require("../models/game")
 const Games = require("../models/game")
 const router      = express.Router();
 
+
 router.get("/", (req, res)=>{
     if(req.user){
         User.findById(req.user._id).then(()=>res.redirect("/users/@me"))
@@ -20,7 +21,7 @@ router.get("/", (req, res)=>{
 
 router.get("/joystick", (req, res)=>{
   if(req.user){
-    res.render('joystick',{title:"joystick"}) 
+    res.render('joystick',{game: Game.name, title:"joystick"}) 
   }else{
     res.redirect("/users/login")
   }
