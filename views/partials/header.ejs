@@ -19,6 +19,10 @@
     <link href="/stylesheets/fontawesome-all.min.css" rel="stylesheet">
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link href="/img/icon.png" rel="icon" type="image/png">
+    <link href="/img/icon.png" rel="shortcut icon" type="image/png">
+
     <!-- Custom CSS -->
     <link href="/stylesheets/jquery.mCustomScrollbar.css" rel="stylesheet">
     <link href="/stylesheets/main.css?rev=@@hash" rel="stylesheet">
@@ -32,13 +36,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     [endif]
-    <!-- DEFRESH -->
-  
 </head>
 
 <body>
 <script>
-  function alert(){
+  function alert(e){
     
     const Toast = Swal.mixin({
       toast: true,
@@ -54,11 +56,10 @@
 
     Toast.fire({
       icon: 'info',
-      title: 'Sign up for an account on our git instance! <a href="https://glitchcord-git.glitch.me" target="_blank">https://glitchcord-git.glitch.me</a>'
+      title: e
     })
 }
-  
-  alert()
+  alert('Sign up for an account on our git instance at&nbsp;<a href="https://glitchcord-git.glitch.me" target="_blank">https://glitchcord-git.glitch.me</a>');
   </script>
     <div id="bg">
         <div id="particles-js"></div>
