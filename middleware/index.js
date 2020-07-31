@@ -1,6 +1,7 @@
 const { ObjectID } = require("mongodb");
 const Channel = require("../models/channel");
 const User = require("../models/user");
+const Game = require("../models/game")
 
 const middleware = {};
 

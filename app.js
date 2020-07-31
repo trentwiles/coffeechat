@@ -9,6 +9,7 @@ const LocalStrategy = require("passport-local");
 const mongoose = require("mongoose");
 const flash = require("req-flash");
 const User = require("./models/user");
+const Game = require("./models/game")
 const config = require("./config/config");
 const passportStrategy = require("./config/passport");
 const indexRoute = require("./routes/index");
