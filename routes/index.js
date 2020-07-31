@@ -1,9 +1,7 @@
 const express     = require("express");
 const User        = require("../models/user");
-const Game = require("../models/game")
-const Games = require("../models/game")
-const router      = express.Router();
 
+const router      = express.Router();
 
 router.get("/", (req, res)=>{
     if(req.user){
@@ -21,7 +19,7 @@ router.get("/", (req, res)=>{
 
 router.get("/joystick", (req, res)=>{
   if(req.user){
-    res.render('joystick',{game: Game.name, title:"joystick"}) 
+    res.render('joystick',{title:"joystick"}) 
   }else{
     res.redirect("/users/login")
   }

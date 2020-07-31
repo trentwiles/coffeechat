@@ -65,6 +65,7 @@ router.get("/delete", (req, res) => {
 
 // Users Profile
 router.get("/@me", middleware.isLogedIn, (req, res) => {
+  console.log("/@me") // TODO: Find out why this one isn't logging.
   User.findById(req.user._id)
     .populate("channels")
     .then(rUser => {
