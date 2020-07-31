@@ -1,1 +1,59 @@
-<% include partials/header %>  <!-- Page Content --> <div id="sidebar"> <ul class="sidebar-menu"> <li class="toggle-sidebar"><a href="#" data-toggle="sidebar"><i class="fas fa-users"></i></a></li> <% currentUserChannels.forEach(function(channel){ %> <li><a href="/channel/<%= channel._id%>" class="current-server" data-toggle="tooltip" data-placement="right" data-title="<%= channel.channel_name %>"><img src="<%= channel.channel_picture %>" alt=""></a></li> <% }) %> <li><a href="#" class="join-server" data-start="modal-custom" data-target="#create-group" data-toggle="tooltip" data-placement="right" data-title="Join a Group"><i class="fa fa-plus"></i></a></li> </ul> </div>  <div id="page"> <div id="chat-list"> <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a> <ul class="chat-list scroll-hijack">   </ul> </div> <div id="profile" class="page"> <div class="page-header clearfix">  <span><%= user.username %></span> <!-- <ul> <li><a title="Online" href="#">Online - 1</a></li> </ul> --> </div> <div class="profile-body scroll-hijack"> <div class="row"> <div class="col-lg-8 col-lg-offset-2"> <div class="row valign"> <div class="col-md-6"> <div class="mt-25 visible-xs visible-sm"></div> <h6 class="text-bold">Profile</h6> <div class="form-horizontal" action="/users/@me/update?_method=PATCH" method="POST"> <div class="form-group"> <p class="label mb-10">Profile image</p> <label class="profile-photo-placeholder avatar-placeholder"  data-placement="bottom"><img id="profile_photo_img" src="<%= user.profile_picture %>" /></label> </div> <div class="form-group"> <label>Username</label> <p type="text" id="profile_username" class="form-control"><%= user.username %></p> </div> <div class="form-group"> <label>Status</label> <p type="text" id="profile_status" class="form-control"><%= user.status %></p> </div> </div> </div> </div> </div> </div> </div> </div> </div>  <% include partials/footer %> 
+<% include partials/header %>
+
+    <!-- Page Content -->
+    <div id="sidebar">
+            <ul class="sidebar-menu">
+                <li class="toggle-sidebar"><a href="#" data-toggle="sidebar"><i class="fas fa-users"></i></a></li>
+                <% currentUserChannels.forEach(function(channel){ %>
+                    <li><a href="/channel/<%= channel._id%>" class="current-server" data-toggle="tooltip" data-placement="right" data-title="<%= channel.channel_name %>"><img src="<%= channel.channel_picture %>" alt=""></a></li>
+                <% }) %>
+                <li><a href="#" class="join-server" data-start="modal-custom" data-target="#create-group" data-toggle="tooltip" data-placement="right" data-title="Join a Group"><i class="fa fa-plus"></i></a></li>
+            </ul>
+        </div>
+
+    <div id="page">
+        <div id="chat-list">
+            <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
+            <ul class="chat-list scroll-hijack">
+            
+                                      
+            </ul>
+        </div>
+        <div id="profile" class="page">
+            <div class="page-header clearfix">
+              
+                <span><%= user.username %></span>
+                <!-- <ul>
+                    <li><a title="Online" href="#">Online - 1</a></li>
+                </ul> -->
+            </div>
+            <div class="profile-body scroll-hijack">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="row valign">
+                            <div class="col-md-6">
+                                <div class="mt-25 visible-xs visible-sm"></div>
+                                <h6 class="text-bold">Profile</h6>
+                                <div class="form-horizontal" action="/users/@me/update?_method=PATCH" method="POST">
+                                    <div class="form-group">
+                                        <p class="label mb-10">Profile image</p>
+                                        <label class="profile-photo-placeholder avatar-placeholder"  data-placement="bottom"><img id="profile_photo_img" src="<%= user.profile_picture %>" /></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <p type="text" id="profile_username" class="form-control"><%= user.username %></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Status</label>
+                                        <p type="text" id="profile_status" class="form-control"><%= user.status %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include partials/footer %>
