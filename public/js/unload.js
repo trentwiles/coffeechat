@@ -1,3 +1,3 @@
-function defreshUnload() {
-  alert();
+function defreshUnload(f) {
+  alert("Loading "+f+"...");
 }

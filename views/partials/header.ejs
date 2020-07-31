@@ -40,7 +40,7 @@
 
 <body>
 <script>
-  function alert(){
+  function alert(e){
     
     const Toast = Swal.mixin({
       toast: true,
@@ -56,11 +56,11 @@
 
     Toast.fire({
       icon: 'info',
-      title: 'Sign up for an account on our git instance! <a href="https://glitchcord-git.glitch.me" target="_blank">https://glitchcord-git.glitch.me</a>'
+      title: e
     })
 }
   
-  alert()
+  alert('Sign up for an account on our git instance at&nbsp;<a href="https://glitchcord-git.glitch.me" target="_blank">https://glitchcord-git.glitch.me</a>')
   </script>
     <div id="bg">
         <div id="particles-js"></div>
