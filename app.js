@@ -70,8 +70,7 @@ mongoose
 
 // Passport configuration
 app.use(
-  expressSession({
-    // TODO: Stop using this module.. @ihack2712 will implement tokens at some point in time.
+  expressSession({ // TODO: Stop using this module.. @ihack2712 will implement tokens at some point in time.
     secret: "a4fw8542071f-c33873-443447-8ee2321",
     resave: false,
     saveUninitialized: false
@@ -115,7 +114,7 @@ passport.serializeUser((user, done) => {
 // used to deserialize the user
 passport.deserializeUser((id, done) => {
   User.findById(id, (err, user) => {
-    console.log(user.email); // FIXME: Remove this line when bug is fixed.
+    console.log(user.email) // FIXME: Remove this line when bug is fixed.
     done(err, user);
   });
 });
@@ -133,7 +132,9 @@ app.use("/users", userRoute);
 app.use("/channel", channelRoute);
 app.use(ajaxRoute);
 app.get("*", function(req, res) {
-  res.send(
-    '<!DOCTYPE html> <html> <head> <link href="/img/icon.png" rel="icon" type="image/png" /> <link href="/img/icon.png" rel="shortcut icon" type="image/png" /> <title>GlitchChord | 404</title> </head> <body style="background-color:black;font-family:arial;color:white;padding:4vh;font-size:50px;overflow:hidden;" > <center>Not Found - You took a wrong turn. <a href="/" style="color:#12C2AA;" onmouseover="this.style.color=\'white\'" onmouseout="this.style.color=\'#12C2AA\'">Home</a> <a onclick="window.history.back();" style="color:#12C2AA;text-decoration:underline;cursor:pointer;" onmouseover="this.style.color=\'white\'" onmouseout="this.style.color=\'#12C2AA\'">Back</a><hr /><a href="https://http.cat" ><img title="Visit http.cat for more funny cat error images/messages!" src="https://http.cat/404" style="width:50%"/></a> </center>  <script src="https://defresh.js.org/defresh.js"></script> <script src="/js/secure.js"></script></body> </html> '
-  );
+  res
+    .status(404)
+    .send(
+      '<body style="background-color:black;font-family:arial;color:white;"><center>Not Found - You took a wrong turn.<br><a href="https://http.cat"><img src="https://http.cat/404"></a></center>'
+    );
 });
