@@ -1,7 +1,7 @@
 const express     = require("express");
 const User        = require("../models/user");
 const Game = require("../models/game")
-
+const Games = require("../models/game")
 const router      = express.Router();
 
 router.get("/", (req, res)=>{
