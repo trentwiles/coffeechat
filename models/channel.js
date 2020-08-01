@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const sqreen = require('sqreen');
+
 
 const channelSchema = new mongoose.Schema({
     message: [
