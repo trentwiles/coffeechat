@@ -1,4 +1,8 @@
-
+.rectangle {
+  height: 100px;
+  width: 400px;
+  background-color: #2F4F4F;
+}
 .dropbtn {
   background-color: #3498DB;
   color: white;
