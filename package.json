@@ -40,7 +40,8 @@
     "jquery": "^3.5.1",
     "bad-words": "^3.0.3",
     "helmet": "^3.23.3",
-    "express-session": "^1.17.1"
+    "express-session": "^1.17.1",
+    "@sentry/node": "^5.20.1"
   },
   "devDependencies": {
     "eslint": "^5.12.1",

@@ -1,7 +1,28 @@
 
 <link rel="stylesheet" href="/stylesheets/main.css">
-<center><br><br><br><br>
+<title>404</title>
+<br><br><br><br><br><br><br><br><br><br><br>
+<center>
+
 <h1>
-  Oops, 404
+  Oops 404
   </h1>
+  <h3>
+    We couldnt find anything at <code id="404">loading</code>
+  </h3>
+  <h4>
+    This could be because of a typo or broken link.
+  </h4>
+  <h4>
+    <a href="/" class="button">Try Going Home?</a>
+  </h4>
+  <p>
+    If you think this is a mistake, contact us through our <a href="https://glitchord.discourse.group">forum</a>
+  </p>
 </center>
+<script>
+document.getElementById("404").innerHTML = window.location.pathname
+  .split("?")
+  .pop()
+  .split("#")[0];
+</script>

@@ -138,3 +138,8 @@ app.get("*", function(req, res) {
 
 
 });
+const Sentry = require('@sentry/node');
+// or use es6 import statements
+// import * as Sentry from '@sentry/node';
+
+Sentry.init({ dsn: 'https://a381855fbd664f4bad0fec728d5b1717@o428716.ingest.sentry.io/5374400' });
