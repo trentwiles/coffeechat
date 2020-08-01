@@ -128,6 +128,10 @@ app.use((req, res, next) => {
   res.locals.error = req.flash("error");
   next();
 });
+
+
+
+
 // Routes
 app.use("/", indexRoute);
 app.use("/users", userRoute);

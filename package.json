@@ -41,7 +41,6 @@
     "bad-words": "^3.0.3",
     "helmet": "^3.23.3",
     "express-session": "^1.17.1"
-    
   },
   "devDependencies": {
     "eslint": "^5.12.1",
