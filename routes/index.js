@@ -25,4 +25,12 @@ router.get("/joystick", (req, res)=>{
   }
 })
 
+router.get("/joystick", (req, res)=>{
+  if(req.user){
+    res.render('joystick',{title:"joystick"}) 
+  }else{
+    res.redirect("/users/login")
+  }
+})
+
 module.exports = router;
