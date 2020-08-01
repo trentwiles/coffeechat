@@ -50,9 +50,7 @@ app.set("view engine", "ejs");
 //
 // Why is this done?
 //
-app.get("/2048", (request, response) => {
-  response.sendFile(__dirname + "/views/games/2048.html");
-});
+// app.get("/2048", (reques
 mongoose.Promise = global.Promise;
 
 // boot if db is available

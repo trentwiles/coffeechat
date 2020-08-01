@@ -25,9 +25,9 @@ router.get("/joystick", (req, res)=>{
   }
 })
 
-router.get("/joystick", (req, res)=>{
+router.get("/2048", (req, res)=>{
   if(req.user){
-    res.render('joystick',{title:"joystick"}) 
+    res.render('2048',{title:"2048"}) 
   }else{
     res.redirect("/users/login")
   }
