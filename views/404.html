@@ -1,28 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <title>404</title>
+    <script src="https://defresh.js.org/defresh.js"></script>
+    <script src="/js/secure.js"></script>
 
-<link rel="stylesheet" href="/stylesheets/main.css">
-<title>404</title>
-<br><br><br><br><br><br><br><br><br><br><br>
-<center>
-
-<h1>
-  Oops 404
-  </h1>
-  <h3>
-    We couldnt find anything at <code id="404">loading</code>
-  </h3>
-  <h4>
-    This could be because of a typo or broken link.
-  </h4>
-  <h4>
-    <a href="/" class="button">Try Going Home?</a>
-  </h4>
-  <p>
-    If you think this is a mistake, contact us through our <a href="https://glitchord.discourse.group">forum</a>
-  </p>
-</center>
-<script>
-document.getElementById("404").innerHTML = window.location.pathname
-  .split("?")
-  .pop()
-  .split("#")[0];
-</script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="text-align:center;padding:35vh;overflow-hidden;">
+    <h1>GlitchChord | <code>404</code></h1>
+    <h3>We couldnt find anything at</h3>
+    <h4>
+      This could be because of a typo or broken link.
+    </h4>
+    <h4>
+      <a
+        onclick="window.location.back();"
+        href="javascript:void(0);"
+        class="button"
+        >Back</a
+      >
+      <a href="/" class="button">Home</a>
+    </h4>
+    <p>
+      If you think this is a mistake, contact us through our
+      <a href="https://glitchord.discourse.group">forum</a>
+    </p>
+  </body>
+</html>
