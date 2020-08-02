@@ -52,20 +52,25 @@
                         <form class="form-horizontal" action="/users/login" method="POST">
                     <div class="form-group">
                         <label for="email">Username Of "Abuser"</label>
-                        <input type="name" name="abuse-name" id="email" class="form-control" />
+                        <input type="name" name="abuse-name" id="email" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label for="password">How Did They Abuse</label>
-                        <input type="name" name="how-abuse?" id="password" class="form-control" />
+                        <input type="name" name="how-abuse?" id="password" class="form-control" required/>
                     </div>
                             <div class="form-group">
                         <label for="password">Your Username</label>
-                        <input type="name" name="username" id="password" class="form-control" />
+                        <input type="name" name="username" id="password" class="form-control" required/>
                     </div>
                           
                     <div class="form-group">
                       
-                        <button type="submit" class="btn btn-block btn-radius btn-danger">Report Abuse</button>
+                        <button type="submit" class="btn btn-block btn-radius btn-danger"><i class="fas fa-ban"></i> Report Abuse</button>
+                    <br>
+                      <p>
+                        <b>NOTE:</b> if you abuse the abuse system you will be suspened from reporting system.
+                      </p>
+                      
                       <p class="help-block2 mb-25">‎</a>
                       
                   </div>

@@ -46,9 +46,15 @@
                                     <div class="form-group">
                                         <label>My Status</label>
                                         <p type="text" id="profile_status" class="form-control"><%= user.status %></p><br>
-                                                                    <button style="background-color: orange;" class="btn btn-primary btn-radius">
+                                                                    <button onclick="myFunction()" style="background-color: orange;" class="btn btn-primary btn-radius">
                                <i class="fas fa-ban"></i> report abuse <%= user.username %>
                                </button>
+                                      
+                                      <script>
+                                      function myFunction() {
+  location.replace("https://glitchchord-app.glitch.me/report")
+}
+                                      </script>
                                     </div>
                                 </div>
                             </div>
