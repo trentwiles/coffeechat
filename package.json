@@ -39,7 +39,7 @@
     "validator": "^10.11.0",
     "jquery": "^3.5.1",
     "bad-words": "^3.0.3",
-    "helmet": "^4.0.0",
+    "helmet": "^3.23.3",
     "express-session": "^1.17.1",
     "sqreen": "^1.50.0"
   },
