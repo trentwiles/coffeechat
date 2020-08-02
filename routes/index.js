@@ -42,5 +42,12 @@ router.get("/report", (req, res)=>{
   }
 })
 
+router.get("/faq", (req, res)=>{
+  if(req.user){
+    res.render('faq',{title:"faq"}) 
+  }else{
+    res.redirect("/users/login")
+  }
+})
 
 module.exports = router;
