@@ -1,49 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="nofollow, noindex" />
-    <link rel="stylesheet" href="/stylesheets/main.css" />
-    <title>GlitchChord | 404</title>
-    <link href="/img/icon.png" rel="icon" type="image/png" />
-    <link href="/img/icon.png" rel="shortcut icon" type="image/png" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body style="text-align:center;padding:12vw;overflow:hidden;">
-    <h1>Whoops, <code style="color:#12C2AA;">404</code>!</h1>
-    <br />
-    <h3>
-      We couldn't find anything on
-      <code id="path" style="color:#BBB;">/</code>.
-    </h3>
-    <h4>This could be due to a typo or broken link.</h4>
-    <br />
-    <h3>
-      <a
-        onclick="history.back();"
-        style="cursor:pointer;text-decoration:underline;"
-        class="button"
-        >Back</a
-      >
-      or
-      <a href="/" class="button">Home</a>
-    </h3>
-    <br />
-    <p>
-      If you think this is a mistake, contact us through our
-      <a href="https://glitchord.discourse.group">Forum</a>.<br />Remember, all
-      support counts!
-    </p>
-    <script src="https://defresh.js.org/defresh.js" defer></script>
-    <script src="/js/secure.js"></script>
-    <script src="/js/404.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  </body>
-</html>
+
+<link rel="stylesheet" href="/stylesheets/main.css">
+<title>404</title>
+<br><br><br><br><br><br><br><br><br><br><br>
+<center>
+
+<h1>
+  Oops 404
+  </h1>
+  <h3>
+    We couldnt find anything at <code id="404">loading</code>
+  </h3>
+  <h4>
+    This could be because of a typo or broken link.
+  </h4>
+  <h4>
+    <a href="/" class="button">Try Going Home?</a>
+  </h4>
+  <p>
+    If you think this is a mistake, contact us through our <a href="https://glitchord.discourse.group">forum</a>
+  </p>
+</center>
+<script>
+document.getElementById("404").innerHTML = window.location.pathname
+  .split("?")
+  .pop()
+  .split("#")[0];
+</script>

@@ -139,5 +139,7 @@ app.use("/channel", channelRoute);
 app.use(ajaxRoute);
 app.get("*", function(req, res) {
   res.sendFile(__dirname + '/views/404.html');
+
+
 });
 

@@ -1,21 +1,13 @@
 function defreshUnload(f) {
-  if (f !== window.location.href) {
+  if (f !== location.href) {
     if (
-      f.replace(
-        window.location.protocol + "//" + window.location.hostname,
-        ""
-      ) !== "/" &&
-      f.replace(
-        window.location.protocol + "//" + window.location.hostname,
-        ""
-      ) !== "/users/@me"
+      f.replace(location.protocol + "//" + location.hostname, "") !== "/" &&
+      f.replace(location.protocol + "//" + location.hostname, "") !==
+        "/users/@me"
     ) {
       alert(
         "Loading " +
-          f.replace(
-            window.location.protocol + "//" + window.location.hostname,
-            ""
-          ) +
+          f.replace(location.protocol + "//" + location.hostname, "") +
           "..."
       );
     } else {
