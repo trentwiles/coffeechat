@@ -79,6 +79,7 @@ router.get("/@me", middleware.isLogedIn, (req, res) => {
     });
 });
 
+
 // external user Profile
 router.get("/:id", middleware.isLogedIn, (req, res, next) => {
   console.log(req.param.id); // TODO: When fixed bug, remove this line.
