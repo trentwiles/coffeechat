@@ -2,10 +2,13 @@
 <html>
   <head>
     <link rel="stylesheet" href="/stylesheets/main.css" />
-    <title>404</title>
+    <title>GlitchChord | 404</title>
     <script src="https://defresh.js.org/defresh.js"></script>
     <script src="/js/secure.js"></script>
-
+    <script src="/js/404.js" async></script>
+    <!-- Favicon -->
+    <link href="/img/icon.png" rel="icon" type="image/png" />
+    <link href="/img/icon.png" rel="shortcut icon" type="image/png" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -13,24 +16,24 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="text-align:center;padding:35vh;overflow-hidden;">
-    <h1>GlitchChord | <code>404</code></h1>
-    <h3>We couldnt find anything at</h3>
+  <body style="text-align:center;padding:13vw;overflow:hidden;">
+    <h1>Whoops, <code style="color:#12C2AA;">404</code>!</h1>
+    <br />
+    <h3>We couldn't find anything on <code id="path" style="color:#12C2AA;">/</code>.</h3>
     <h4>
       This could be because of a typo or broken link.
-    </h4>
-    <h4>
-      <a
-        onclick="window.location.back();"
-        href="javascript:void(0);"
-        class="button"
+      <br />
+       </h4>
+    <h2>
+   <a onclick="window.location.back(); return false;" href="#" class="button"
         >Back</a
       >
       <a href="/" class="button">Home</a>
-    </h4>
+      
+    </h2>
     <p>
       If you think this is a mistake, contact us through our
-      <a href="https://glitchord.discourse.group">forum</a>
+      <a href="https://glitchord.discourse.group">Forum</a>.
     </p>
   </body>
 </html>
