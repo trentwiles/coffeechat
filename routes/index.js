@@ -34,5 +34,13 @@ router.get("/2048", (req, res)=>{
     res.redirect("/users/login")
   }
 })
+router.get("/report", (req, res)=>{
+  if(req.user){
+    res.render('report-user',{title:"Report User"}) 
+  }else{
+    res.redirect("/users/login")
+  }
+})
+
 
 module.exports = router;

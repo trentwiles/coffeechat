@@ -22,9 +22,7 @@
                         <div class="row valign">
                             
                           <div class="col-md-6">
-                              <button style="background-color: orange;" onclick='alert("your account has been marked for deletion, after a few days all data tied with your user will be deleted. Sign back in to revert your changes");defresh("/users/delete", "replace")' class="btn btn-primary btn-radius">
-                               <i class="fas fa-ban"></i> report user
-                               </button>
+
                                 <h6 class="text-bold mt-25">invite code list</h6>
                                 <p class="mb-25 clr-fade text-small">Click a group to copy the invite link to clipboard</p>
                                 <p class="mb-25 clr-fade text-small">or goto your channel and append /join/ before the long number (eg: <code>https://glitchchord.glitch.me/channel/join/long_number</code>)</p>
@@ -101,9 +99,11 @@
                                         <button type="submit" class="btn btn-primary btn-radius">Save Changes</button>
                                   </div>
                               </form>
+                          <h6 class="text-bold">Danger Zone</h6><br>
                              <button style="background-color: red;" onclick='alert("your account has been marked for deletion, after a few days all data tied with your user will be deleted. Sign back in to revert your changes");defresh("/users/delete", "replace")' class="btn btn-primary btn-radius">
                                 delete account
                                </button><br><br>
+                              
                                   
 <!--                                             <li><a onclick="ban" data-no-defresh class="join-server" data-start="modal-custom" data-target="#create-group" data-title="Report User"> </a></li> -->
 
