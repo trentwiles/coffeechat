@@ -36,7 +36,7 @@ router.get("/2048", (req, res)=>{
 })
 router.get("/report", (req, res)=>{
   if(req.user){
-    res.render('report-user',{title:"Report User"}) 
+    res.render('report-abuse',{title:"Report User"}) 
   }else{
     res.redirect("/users/login")
   }
