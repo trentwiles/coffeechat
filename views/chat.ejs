@@ -90,7 +90,9 @@
             <div class="page-header clearfix" translate="no">
                   <span><%= channel.channel_name %></span>
                 <ul>
-                    <!-- <li><a title="Online" href="#">Online - 1</a></li> -->
+                  <% if(channel.verified === true){ %>    
+                    <li><a title="" href="#"><i class="fas fa-check"></i>   Verified server</a></li>
+                  <% } %>
                 </ul>
             </div>
             <div class="chat-body scroll-hijack">

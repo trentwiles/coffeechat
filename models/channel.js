@@ -31,6 +31,11 @@ const channelSchema = new mongoose.Schema({
         type: String,
         default: "/img/placeholder.png",
     },
+  
+   verified: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 module.exports = mongoose.model("Channel", channelSchema);
