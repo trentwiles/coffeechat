@@ -11,6 +11,10 @@
             <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="this user is a partner!"><i class="fas fa-handshake"></i>&nbsp; Partners forever</li></center>
            <% } %>
           
+          <% if(currentUser.role === "bot developer"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="this user is a verified bot developer"><i class="fas fa-robot"></i>&nbsp; Beep bop im on top</li></center>
+           <% } %>
+          
             <ul class="chat-list scroll-hijack">
             </ul>
         </div>
@@ -33,7 +37,7 @@
                                 <div class="groups-list scroll-hijack">
                                     <ul class="list">
                                         <% channels.forEach(function(channel){ %>
-                                            <li><a href="/channel/<%=channel._id%>" data-invite-link="https://app.glitchchord.tk/channel/join/<%=channel._id%>"><div class="avatar"><img class="little_avatar" src="<%= channel.channel_picture %>" /></div><%=channel.channel_name%></a></li>
+                                            <li><a href="/channel/<%=channel._id%>" data-invite-link="https://glitchchord-app.glitch.me/channel/join/<%=channel._id%>"><div class="avatar"><img class="little_avatar" src="<%= channel.channel_picture %>" /></div><%=channel.channel_name%></a></li>
                                         <%});%>
                                       
                                   </ul>
