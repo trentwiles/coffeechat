@@ -6,6 +6,13 @@
     <div id="page">
         <div id="chat-list">
             <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
+          <% if(currentUser.role === "partner"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="this user is a partner!"><i class="fas fa-check"></i>&nbsp; Partners forever</li></center>
+           <% } %>
+          <% if(currentUser.role === "founder"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="this user helped in the finding of happiness... i mean glitchchord!"><i class="fas fa-check"></i>&nbsp; Finding happiness</li></center>
+           <% } %>
+
             <ul class="chat-list scroll-hijack">
             </ul>
         </div>
@@ -22,11 +29,6 @@
                         <div class="row valign">
                             
                           <div class="col-md-6">
-                            <% if(currentUser.role === "creator"){ %>    
-                                <li data-toggle="tooltip" data-placement="bottom" data-title="NICE! your the leader"><i class="fas fa-check"></i>   Verified user</li>
-                            <% } %>
-
-
                                 <h6 class="text-bold mt-25">invite code list</h6>
                                 <p class="mb-25 clr-fade text-small">Click a group to copy the invite link to clipboard</p>
                                 <p class="mb-25 clr-fade text-small">or goto your channel and append /join/ before the long number (eg: <code>https://glitchchord.glitch.me/channel/join/long_number</code>)</p>
