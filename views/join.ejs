@@ -20,13 +20,17 @@
                         <% } %>
                     <% }); %>
                     <li><%= count %> online users</li>
+                  <% if(channel.verified === true){ %>    
+                    <li><i class="fas fa-check"></i>   Scientific studies showed that this server is <b>verified</b></li>
+                  <% } %>
+
                 </ul>
                 <a href="/" class="decline link-underline">Decline Invitation</a>
             </div>
         </div>
         <div class="invitation-join">
                 <form action="/channel/join/<%= channel._id %>" method="POST">
-                    <button type="submit" class="btn btn-block btn-primary">Join <%= channel.channel_name %></button>
+                    <button type="submit" class="btn btn-block btn-primary">Join</button>
                 </form> 
         </div>
     </div>
