@@ -6,15 +6,19 @@
     <div id="page">
         <div id="chat-list">
             <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
-          
-          <% if(currentUser.role === "partner"){ %>    
-            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="Official Glitchord Partner"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fpartner.png?v=1596481731388" height="20" width="30"></i>&nbsp; Glitchord Partner</li></center>
-          <% } %>
-          
-          <% if(currentUser.role === "bot_developer"){ %>    
-            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="this user is a verified bot developer"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fpartner.png?v=1596481731388" height="20" width="30"></i>&nbsp; Beep bop im on top</li></center>
+            <% if(currentUser.role === "staff"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is an official Glitchord Staff member"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fstaff_badge.png?v=1596482878314" height="30" width="30"></i>&nbsp; Glitchord Staff Member</li></center>
            <% } %>
           
+          <% if(currentUser.role === "partner"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is an Official Glitchord Partner"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fpartner.png?v=1596481731388" height="20" width="30"></i>&nbsp; Glitchord Partner</li></center>
+          <% } %>
+          
+          
+        
+          <% if(currentUser.role === "bot_developer"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is a Verified Bot Developer"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fverified_bot_developer.png?v=1596482570475" height="25" width="30"></i>&nbsp; Verified Bot Developer</li></center>
+           <% } %>
             <ul class="chat-list scroll-hijack">
             </ul>
         </div>
