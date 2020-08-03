@@ -37,7 +37,13 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     [endif]
 </head>
-
+<noscript>
+Swal.fire(
+  'Whoops!',
+  'Your javascript isn't enabled, meaning you can't use glitchchord how it should be!,
+  'error'
+)
+</noscript>
 <body>
 <script>
   function alert(e){
