@@ -12,7 +12,7 @@ const sqreen = require('sqreen');
         minlength: 1,
     },
     role: {
-      type: String  
+      type: String
     },
     email: {
         type: String,
