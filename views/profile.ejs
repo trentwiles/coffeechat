@@ -8,11 +8,11 @@
             <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
           
           <% if(currentUser.role === "partner"){ %>    
-            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is a partner!"><img src="https://cdn.glitch.com/55f8497b-3334-43ca-851e-6c9780082244%2Fverified.svg?1501783108220" height="20" width="30"></i>&nbsp; Partners forever</li></center>
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="Official Glitchord Partner"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fpartner.png?v=1596481731388" height="20" width="30"></i>&nbsp; Glitchord Partner</li></center>
           <% } %>
           
-          <% if(currentUser.role === "bot developer"){ %>    
-            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="this user is a verified bot developer"><i class="fas fa-robot"></i>&nbsp; Beep bop im on top</li></center>
+          <% if(currentUser.role === "bot_developer"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="this user is a verified bot developer"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fpartner.png?v=1596481731388" height="20" width="30"></i>&nbsp; Beep bop im on top</li></center>
            <% } %>
           
             <ul class="chat-list scroll-hijack">
