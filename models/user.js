@@ -11,6 +11,9 @@ const sqreen = require('sqreen');
         required: true,
         minlength: 1,
     },
+    role: {
+      type: String  
+    },
     email: {
         type: String,
         required: true,
