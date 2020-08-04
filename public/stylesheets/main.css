@@ -111,10 +111,10 @@ body {
     width: 200%;
     height: 100%;
     background: #202225;
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #0a284d), color-stop(51%, #FFAABF), color-stop(100%, #061a33));
-    background: -webkit-radial-gradient(center, ellipse cover, #0a284d 0%, #061a33 51%, #061a33 100%);
-    background: -webkit-radial-gradient(center ellipse, #0a284d 0%, #061a33 51%, #061a33 100%);
-    background: radial-gradient(ellipse at center, #0a284d 0%, #061a33 51%, #061a33 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #FFAABF), color-stop(51%, #FFAABF), color-stop(100%, #061a33));
+    background: -webkit-radial-gradient(center, ellipse cover, #FFAABF 0%, #FFAABF 51%, #FFAABF 100%);
+    background: -webkit-radial-gradient(center ellipse, #FFAABF 0%, #FFAABF 51%, #FFAABF 100%);
+    background: radial-gradient(ellipse at center, #FFAABF 0%, #FFAABF 51%, #FFAABF 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a284d', endColorstr='#061a33', GradientType=1);
     -webkit-animation: pulse 3s ease infinite;
             animation: pulse 3s ease infinite; }
@@ -939,7 +939,7 @@ a:focus {
   top: 50%;
   -webkit-transform: translateY(-50%) scale(0.5);
           transform: translateY(-50%) scale(0.5);
-  background: #12c2aa;
+  background: #A2D7FF;
   border-radius: 60%;
   width: 24px;
   height: 24px;
@@ -1043,7 +1043,7 @@ a:focus {
 .modal-brand {
   position: relative;
   min-width: 150px;
-  background-color: #12c2aa; }
+  background-color: #C454FF; }
   .modal-brand:before {
     content: "";
     position: absolute;
@@ -1231,7 +1231,7 @@ label,
   .btn-radius:hover {
     border-radius: 60px; }
   .btn-primary, .btn-primary:focus {
-    background-color: #12c2aa;
+    background-color: #3652D3;
     border: 0;
     color: #fff; }
   .btn-primary:hover, .btn-primary:active:focus {
