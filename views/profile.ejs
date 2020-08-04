@@ -33,6 +33,9 @@
           <% if(currentUser.role === "booster"){ %>    
             <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is Nitro Booster, they are boosting a Glitchord server."><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fbooster.png?v=1596493456758" height="25" width="30"></i>&nbsp; Nitro Booster</li></center>
            <% } %>
+          <% if(currentUser.role === "verified"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is a verified."><img src="https://cdn.glitch.com/55f8497b-3334-43ca-851e-6c9780082244%2Fverified.svg?1501783108220" height="25" width="30"></i>&nbsp; Official Glitchord Account</li></center>
+           <% } %>
             <ul class="chat-list scroll-hijack">
             </ul>
         </div>
