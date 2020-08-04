@@ -1,7 +1,6 @@
 const { ObjectID } = require("mongodb");
 const Channel = require("../models/channel");
 const User = require("../models/user");
-
 const middleware = {};
 
 // TODO: Someone has to fix this type, please... `isLoggedin`
@@ -9,7 +8,7 @@ middleware.isLogedIn = (req, res, next)=>{
     if(req.isAuthenticated()){
         next();
     }else{
-        $("label").remove();
+      res.redirect("users/login")
     }
 };
 
@@ -21,6 +20,7 @@ middleware.isChannelParticipant = (req, res, next)=>{
 
 
     Channel.findById(ObjectID(req.params.id)).then((rChannel)=>{
+//       hi
         if(!rChannel){
             return res.redirect("/");
         }
