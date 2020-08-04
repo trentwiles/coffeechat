@@ -1,6 +1,20 @@
  <% include partials/header %>
 <title><% user.username %></title>
     <!-- Page Content -->
+    <% if(user.private === true){ %>    
+            <script>
+              function private{
+                Swal.fire(
+                    'This user is private!',
+                    'you cannot see this user profile!',
+                    'error'
+                  )
+                window.history.back();
+              }
+              
+            </script>
+     <% } %>
+          
     <div id="sidebar">
             <ul class="sidebar-menu">
                 <li class="toggle-sidebar"><a href="#" data-toggle="sidebar"><i class="fas fa-users"></i></a></li>
