@@ -112,6 +112,12 @@
                                   </div>
                                   
                                     <div class="form-group">
+                                      <label for="profile_private"><code>Make your profile private?</code></label>
+                                      <input type="text" name="user[private]" id="profile_private" class="form-control" value="<%= currentUser.private %>" />
+                                      <p class="label mb-10">true/false (lowercase)- 'true' will redirect users away from your profile</p>
+                                  </div>
+                                  
+                                    <div class="form-group">
                                       <label for="profile_password"><code>Password</code></label>
                                         <input type="password" name="profile_password" id="profile_password" class="form-control" value="johndoe" />
                                     </div>
