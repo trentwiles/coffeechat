@@ -56,6 +56,8 @@ const sqreen = require('sqreen');
         type: Date,
         default: Date.now,
     },
+   
+   // the quite ridiculous boolean logic essential to normal operation
     online: {
         type: Boolean,
         default: false,
@@ -65,6 +67,10 @@ const sqreen = require('sqreen');
         default: false,
     },
    admin: {
+        type: Boolean,
+        default: false,
+    },
+    private: {
         type: Boolean,
         default: false,
     },
