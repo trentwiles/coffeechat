@@ -517,11 +517,11 @@ a:focus {
     background: rgba(255, 255, 255, 0.04);
     color: rgba(255, 255, 255, 0.6); }
   .sidebar-menu .current-server {
-    background-color: #12c2aa;
+    background-color: #061a33;
     font-family: "uni_sansheavy_caps", sans-serif;
     font-size: 24px; }
   .sidebar-menu .current-server:hover {
-    background-color: #10ab96; }
+    background-color: #061a33; }
   .sidebar-menu .join-server {
     background: transparent;
     border: 1px dashed rgba(255, 255, 255, 0.4);
