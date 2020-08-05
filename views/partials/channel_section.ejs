@@ -5,9 +5,10 @@
         <% channels.forEach(function(channel){ %>
             <li><a href="/channel/<%= channel._id%>" class="current-server" data-toggle="tooltip" data-placement="right" data-title="<%= channel.channel_name %>"><img src="<%= channel.channel_picture %>" alt=""></a></li>
         <% }) %>
-        <li><a href="#" data-no-defresh class="join-server" data-start="modal-custom" data-target="#create-group" data-toggle="tooltip" data-placement="right" data-title="Create A Group"><i class="fa fa-plus"></i></a></li>
-        <li><a href="/joystick" data-do-defresh data-toggle="tooltip" data-placement="right" data-title="Enter joystick! 🎮"><i class="fas fa-gamepad"></i></a></li>
-        <li><a href="https://glitchord.discourse.group" data-toggle="tooltip" data-placement="right" data-title="Report A Bug 💬 "><i class="fas fa-bug"></i></a></li>
+      <li><a href="#" data-no-defresh class="join-server" data-start="modal-custom" data-target="#create-group" data-toggle="tooltip" data-placement="right" data-title="Create A Group"><i class="fa fa-plus"></i></a></li>
+      <li><a href="/discovery" data-do-defresh data-toggle="tooltip" data-placement="right" data-title="Explore Public Servers! 🔎"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fpartner.png?v=1596481731388" height="20" width="30"></a></li>
+      <li><a href="/joystick" data-do-defresh data-toggle="tooltip" data-placement="right" data-title="Enter joystick! 🎮"><i class="fas fa-gamepad"></i></a></li>
+      <li><a href="https://glitchord.discourse.group" data-toggle="tooltip" data-placement="right" data-title="Report A Bug 🐞 "><i class="fas fa-bug"></i></a></li>
 
   </ul>
 </div>
