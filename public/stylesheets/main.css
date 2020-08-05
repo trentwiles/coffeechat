@@ -1,8 +1,9 @@
-.rectangle {
-  height: 100px;
-  width: 500px;
-  background-color: #2F4F4F;
+.square {
+  height: 250px;
+  width: 300px;
+  background-color: #555;
 }
+
 
 .dropbtn {
   background-color: #3498DB;
