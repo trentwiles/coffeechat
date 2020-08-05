@@ -1,0 +1,38 @@
+<% include partials/header %>
+
+<!--Does anyone need help with anything? -Losh531-->
+    <!-- Page Content -->
+    <div class="page-single">
+        <div class="modal-block modal-visible">
+            <div class="modal-brand">
+                <div class="modal-brand-caption">
+                    <div class="logo">Glitch<span>Cord</span></div>
+                </div>
+            </div>
+            <div class="modal-block-content">
+                <h3>Welcome back to GlitchCord!</h3>
+                <form class="form-horizontal" action="/users/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <p class="help-block2 mb-25">Need an account? Register <a href="/users/register" class="clr-primary link-underline">here</a>.</p>
+                      
+                        <button type="submit" class="btn btn-block btn-radius btn-primary">Login</button>
+                      <p class="help-block2 mb-25">‎</a>
+                        <br> Sign up for an account at our git instance <a href="https://glitchord-git.glitch.me" class="clr-primary link-underline">here!</a></p>
+                          
+   <p class="help-block2 mb-25">Visit the ProTech IT solutions website <a href="https://protech.glitch.me" class="clr-primary link-underline">here!</a>
+                          
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<% include partials/footer %>
