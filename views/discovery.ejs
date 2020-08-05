@@ -1,0 +1,79 @@
+<% include partials/header %>
+
+<script src="/js/libs/jquery-3.2.1.min.js"></script>
+<script src="/js/libs/bootstrap.min.js"></script>
+<script src="/js/libs/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+<script src="/js/app.js?rev=@@hash"></script>
+<link href="/stylesheets/fontawesome-all.min.css" rel="stylesheet">
+<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+<link href="/stylesheets/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="/stylesheets/main.css?rev=@@hash" rel="stylesheet">
+<link href="/stylesheets/main-responsive.css?rev=@@hash" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-borderless@3.2.0/borderless.min.css">
+<script src="https://defresh.js.org/defresh.js"></script>
+<link rel="stylesheet" href="joystick-beta.glitch.me/style.css">
+<script src="/js/unload.js"></script>
+<script src="/js/secure.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+[if lt IE 9]
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+[endif]
+  <div id="page">
+    <div id="chat-list">
+            <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
+            <p class="label mb-10">Servers by us:</p>
+            <a href="/channel/join/5f059088e1ba5f1377a0b239" class="user"><div class="avatar"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fglitchchord.png?v=1596566348092" /></div>Glitchchord testers</a>
+            
+        </div>
+        
+        <div id="profile" class="page">
+            <div class="page-header clearfix">
+                <span>Server Discovery</span> 
+                <ul>
+                   <li style="color: #6495ed">Server Discovery is limited to verified and partnered servers. </li>
+                </ul>
+            </div>
+            <div class="profile-body scroll-hijack">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h4>Popular Communities</h4>
+                      <hr>
+                      
+                      
+                <a href="/channel/join/5f059088e1ba5f1377a0b239"> 
+                  <div class="square">
+                <img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fglitchchord.png?v=1596566348092" width=99% height=99%>
+                <b><p>Glitchord Testers</p></b>
+                <hr>
+                <small>
+                  The Official Glitchord Server. You can ask our community for support, or just have a fun time chatting!
+                </small>
+                  </div>
+                </a>
+                      
+                <a href="/channel/join/5f2a327bc7ae0308ef90febf"> 
+                  <div class="square">
+                <img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fwave.svg?v=1596597932367" width=99% height=99%>
+                <b><p>Glitchord Demo</p></b>
+                <hr>
+                <small>
+                  Join this server for a walkthrough about Glitchord and it's features!
+                </small>
+                </a>
+              </div>
+<!--                       <div style="width:100%;height:100%;"  class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://joystick-beta.glitch.me">
+                          There was an error loading the game. Try to reload?
+                        </iframe>
+                      </div>   -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

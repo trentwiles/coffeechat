@@ -65,7 +65,7 @@ Swal.fire(
       title: e
     })
 }
-  alert('Check Out Glitchord Joystick. The Integrated Gaming Platform');
+  alert('Check out server discovery: https://glitchchord-app.glitch.me/discovery!'); 
   </script>
     <div id="bg">
         <div id="particles-js"></div>
@@ -74,7 +74,7 @@ Swal.fire(
     <nav class="navbar" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="/">GlitchCord (v0.1.12)</a>
+              <a class="navbar-brand" href="/">GlitchCord (v0.1.13)</a>
             </div>
             <div class="navbar-menu">
                 <% if(title === "Login"){ %>
@@ -87,7 +87,7 @@ Swal.fire(
                       position: relative;
                       display: inline-block;
                     }
-
+    
                     .dropdown-content {
                       display: none;
                       position: absolute;
@@ -104,15 +104,17 @@ Swal.fire(
                     </style>
 
                     <div class="dropdown">
-                      <span>Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
+                      <img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fchat_phone.svg?v=1596601576034" height="25" width="25"> Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
                       <div class="dropdown-content">
-                        <a href="/users/logout"><p style="color: black"><i class="fas fa-sign-out-alt"></i>     sign out</p></a>
-                        <a href="/joystick"><p style="color: black"><i class="fas fa-gamepad"></i>     joystick gaming</p></a>
+                        <a href="/users/logout"><p style="color: black"><i class="fas fa-sign-out-alt"></i>     Sign Out</p></a>
+                        <a href="/discovery"><p style="color: black"><i class="fas fa-search"></i>     Server Discovery</p></a>
+                        <a href="/joystick"><p style="color: black"><i class="fas fa-gamepad"></i>     Joystick Gaming</p></a>
+
                         <% if (currentUser.admin === true){  %>
                           <hr>
-                          <small style="color: black">Admin controls</small>
+                          <small style="color: black">Admin Controls</small>
                           <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-                          <p onclick="eruda.init();eruda.show()" style="color: black"><i class="fas fa-terminal"></i>     start console</>
+                          <p onclick="eruda.init();eruda.show()" style="color: black"><i class="fas fa-terminal"></i>     Start Console</>
                         <% } %>
                       </div>
                     </div>
