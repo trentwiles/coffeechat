@@ -1,5 +1,7 @@
 const express     = require("express");
 const User        = require("../models/user");
+const   middleware  = require("../middleware/index");
+const   Channel     = require("../models/channel");
 const sqreen = require('sqreen');
 
 
@@ -26,13 +28,7 @@ router.get("/joystick", (req, res)=>{
     res.redirect("/users/login")
   }
 })
-router.get("/discovery", (req, res)=>{
-  if(req.user){
-    res.render('discovery',{title:"Discovery"}) 
-  }else{
-    res.redirect("/users/login")
-  }
-})
+
 
 router.get("/2048", (req, res)=>{
   if(req.user){
