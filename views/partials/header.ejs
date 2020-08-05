@@ -104,7 +104,7 @@ Swal.fire(
                     </style>
 
                     <div class="dropdown">
-                      Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
+                      <img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fchat_phone.svg?v=1596601576034" height="25" width="25"> Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
                       <div class="dropdown-content">
                         <a href="/users/logout"><p style="color: black"><i class="fas fa-sign-out-alt"></i>     Sign Out</p></a>
                         <a href="/discovery"><p style="color: black"><i class="fas fa-search"></i>     Server Discovery</p></a>
