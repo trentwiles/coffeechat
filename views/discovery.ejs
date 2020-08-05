@@ -24,18 +24,13 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 [endif]
   <div id="page">
-        <div id="chat-list">
+    <div id="chat-list">
             <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
-            <center>
-              <a href="/">
-                <button style="color: black">
-                Return to Glitchchord
-                </button>
-              </a>
-          </center>
-            <ul class="chat-list scroll-hijack">
-            </ul>
+            <p class="label mb-10">Servers by us:</p>
+            <a href="/channel/join/5f059088e1ba5f1377a0b239" class="user"><div class="avatar"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fglitchchord.png?v=1596566348092" /></div>Glitchchord testers</a>
+            
         </div>
+        
         <div id="profile" class="page">
             <div class="page-header clearfix">
                 <span>Server Discovery</span> <img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fcommunity.svg?v=1596597947328" height="25" width="25">
@@ -54,17 +49,6 @@
             </div>
                 
               </div>
-              <style>
-                    .joystickbeta{
-                          background-color: #12C2AA;
-                          font-color:black;
-                          font-size: 50px;
-
-      }
-                .smalljoy{
-                  font-size: 30px;
-                }
-               </style>
 <!--                       <div style="width:100%;height:100%;"  class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://joystick-beta.glitch.me">
                           There was an error loading the game. Try to reload?
