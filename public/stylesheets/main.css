@@ -5,11 +5,16 @@
   border-radius: 25px;
   float: left;
   margin: 5px
+.rectangle {
+  height: 100px;
+  width: 500px;
+  background-color: #244776;
 }
 
 
 .dropbtn {
   background-color: #3498DB;
+  background-color: #05D458;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -91,6 +96,7 @@ body {
   font-family: "Circular Std", sans-serif;
   font-size: 14px;
   background: #061a33;
+  background: #202225;
   color: #ffffff; }
 
   .current-server img{
@@ -105,6 +111,7 @@ body {
   right: 0;
   bottom: 0;
   background: #061A33; }
+  background: #202225; }
   #bg:before {
     content: "";
     position: absolute;
@@ -119,6 +126,11 @@ body {
     background: -webkit-radial-gradient(center, ellipse cover, #0a284d 0%, #061a33 51%, #061a33 100%);
     background: -webkit-radial-gradient(center ellipse, #0a284d 0%, #061a33 51%, #061a33 100%);
     background: radial-gradient(ellipse at center, #0a284d 0%, #061a33 51%, #061a33 100%);
+    background: #202225;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #FFAABF), color-stop(51%, #FFAABF), color-stop(100%, #061a33));
+    background: -webkit-radial-gradient(center, ellipse cover, #FFAABF 0%, #FFAABF 51%, #FFAABF 100%);
+    background: -webkit-radial-gradient(center ellipse, #FFAABF 0%, #FFAABF 51%, #FFAABF 100%);
+    background: radial-gradient(ellipse at center, #FFAABF 0%, #FFAABF 51%, #FFAABF 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a284d', endColorstr='#061a33', GradientType=1);
     -webkit-animation: pulse 3s ease infinite;
             animation: pulse 3s ease infinite; }
@@ -211,6 +223,7 @@ p {
 
 a {
   color: #ffffff;
+  color: #FFAABF;
   -webkit-transition: all .3s ease;
   transition: all .3s ease; }
 
@@ -523,10 +536,12 @@ a:focus {
     color: rgba(255, 255, 255, 0.6); }
   .sidebar-menu .current-server {
     background-color: #061a33;
+    background-color: #83ffcd;
     font-family: "uni_sansheavy_caps", sans-serif;
     font-size: 24px; }
   .sidebar-menu .current-server:hover {
     background-color: #061a33; }
+    background-color: #05D458; }
   .sidebar-menu .join-server {
     background: transparent;
     border: 1px dashed rgba(255, 255, 255, 0.4);
@@ -570,6 +585,7 @@ a:focus {
   top: 60px;
   width: 240px;
   background: #172c48;
+  background: #9588EA;
   height: calc(100% - 60px);
   -webkit-transform: translateX(calc(-100% - 52px));
           transform: translateX(calc(-100% - 52px));
@@ -654,6 +670,7 @@ a:focus {
 
 .friend-list {
   background-color: #172c48;
+  background-color: #9588EA;
   border-radius: 6px;
   padding: 5px;
   min-height: 120px;
@@ -664,6 +681,7 @@ a:focus {
 
 .groups-list {
   background-color: #172c48;
+  background-color: #fcf3b0;
   border-radius: 6px;
   padding: 5px;
   min-height: 120px;
@@ -703,6 +721,7 @@ a:focus {
 .page-header {
   padding: 10px 15px;
   background-color: #1f324c;
+  background-color: #A2D7FF;
   margin: 0;
   border: 0; }
   .page-header ul {
@@ -784,6 +803,7 @@ a:focus {
 .chat-footer {
   padding: 30px;
   background-color: #10243E; }
+  background-color: #FF5F5F; }
   .chat-footer input {
     background: rgba(255, 255, 255, 0.05);
     border: 0;
@@ -945,6 +965,7 @@ a:focus {
   -webkit-transform: translateY(-50%) scale(0.5);
           transform: translateY(-50%) scale(0.5);
   background: #12c2aa;
+  background: #A2D7FF;
   border-radius: 60%;
   width: 24px;
   height: 24px;
@@ -1049,6 +1070,7 @@ a:focus {
   position: relative;
   min-width: 150px;
   background-color: #12c2aa; }
+  background-color: #C454FF; }
   .modal-brand:before {
     content: "";
     position: absolute;
@@ -1237,6 +1259,7 @@ label,
     border-radius: 60px; }
   .btn-primary, .btn-primary:focus {
     background-color: #12c2aa;
+    background-color: #3652D3;
     border: 0;
     color: #fff; }
   .btn-primary:hover, .btn-primary:active:focus {
