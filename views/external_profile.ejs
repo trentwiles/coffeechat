@@ -1,0 +1,104 @@
+    <% include partials/header %>
+<title><% user.username %></title>
+    <!-- Page Content -->
+    <% if(user.private === true){ %>    
+            <script>
+              function private(){
+                alert("This account is private, redirecting you back in time...")
+                window.history.back()
+              }
+              private()
+            </script>
+     <% } %>
+          
+    <div id="sidebar">
+            <ul class="sidebar-menu">
+                <li class="toggle-sidebar"><a href="#" data-toggle="sidebar"><i class="fas fa-users"></i></a></li>
+                <% currentUserChannels.forEach(function(channel){ %>
+                    <li><a href="/channel/<%= channel._id%>" class="current-server" data-toggle="tooltip" data-placement="right" data-title="<%= channel.channel_name %>"><img src="<%= channel.channel_picture %>" alt=""></a></li>
+                <% }) %>
+                <li><a href="#" class="join-server" data-start="modal-custom" data-target="#create-group" data-toggle="tooltip" data-placement="right" data-title="Join a Group"><i class="fa fa-plus"></i></a></li>
+            </ul>
+        </div>
+
+    <div id="page">
+        <div id="chat-list">
+            <a href="/users/@me" class="user"><div class="avatar"><img src="<%= user.profile_picture %>" /></div><%= user.username %></a>
+            <ul class="chat-list scroll-hijack">
+            
+              <% if(user.role === "staff"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is an official Glitchord Staff member"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fstaff_badge.png?v=1596482878314" height="30" width="30"></i>&nbsp; Glitchord Staff Member</li></center>
+           <% } %>
+          <% if(user.role === "partner"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is an Official Glitchord Partner"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fpartner.png?v=1596481731388" height="20" width="30"></i>&nbsp; Glitchord Partner</li></center>
+          <% } %>
+          <% if(user.role === "hypesquad"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is a HypeSquad Member"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fhypesquad.png?v=1596492889992" height="25" width="30"></i>&nbsp; HypeSquad Events</li></center>
+           <% } %>
+          <% if(user.role === "bot_developer"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is a Verified Bot Developer"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fverified_bot_developer.png?v=1596482570475" height="25" width="30"></i>&nbsp; Verified Bot Developer</li></center>
+           <% } %>
+          <% if(user.role === "bug_hunter2"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is a Bug Hunter"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fbug_hunter2.png?v=1596492566968" height="25" width="30"></i>&nbsp; Bug Hunter</li></center>
+           <% } %>
+          <% if(user.role === "bug_hunter"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is a Bug Hunter"><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fbug_hunter.png?v=1596492536802" height="25" width="30"></i>&nbsp; Bug Hunter</li></center>
+           <% } %>
+          <% if(user.role === "early_supporter"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This user is an Early Supporter, they joined Glitchchord before August 1st, 2020."><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fearly_supporter.png?v=1596493131973" height="25" width="30"></i>&nbsp; Early Supporter</li></center>
+           <% } %>
+        
+          <% if(user.role === "verified"){ %>    
+            <center><li class="user" data-toggle="tooltip" data-placement="bottom" data-title="This account is of public interest, and is authentic."><img src="https://cdn.glitch.com/55f8497b-3334-43ca-851e-6c9780082244%2Fverified.svg?1501783108220" height="25" width="30"></i>&nbsp;  Verified Account</li></center>
+           <% } %>
+
+                                      
+            </ul>
+        </div>
+        <div id="profile" class="page">
+            <div class="page-header clearfix">
+              
+                <span><%= user.username %></span>
+                <!-- <ul>
+                    <li><a title="Online" href="#">Online - 1</a></li>
+                </ul> -->
+            </div>
+            <div class="profile-body scroll-hijack">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="row valign">
+                            <div class="col-md-6">
+                                <div class="mt-25 visible-xs visible-sm"></div>
+                                <h6 class="text-bold">Profile</h6>
+                                <div class="form-horizontal" action="/users/@me/update?_method=PATCH" method="POST">
+                                    <div class="form-group">
+                                        <p class="label mb-10">Profile image</p>
+                                        <label class="profile-photo-placeholder avatar-placeholder"  data-placement="bottom"><img id="profile_photo_img" src="<%= user.profile_picture %>" /></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <p type="text" id="profile_username" class="form-control"><%= user.username %></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>My Status</label>
+                                        <p type="text" id="profile_status" class="form-control"><%= user.status %></p><br>
+                                                                    <button onclick="myFunction()" style="background-color: orange;" class="btn btn-primary btn-radius">
+                               <i class="fas fa-ban"></i> report abuse <%= user.username %>
+                               </button>
+                                      
+                                      <script>
+                                      function myFunction() {
+  location.replace("https://glitchchord-app.glitch.me/report")
+}
+                                      </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include partials/footer %>
