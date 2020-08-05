@@ -32,18 +32,6 @@ const upload = multer({
 });
 
 
-router.get("/discovery", (req, res)=>{
-  const channel = {
-        creator: req.user._id,
-        channel_name: req.body.channel_name,
-    };
-  
-  if(req.user){
-    res.render('discovery',{title:"Discovery"}) 
-  }
-})
-
-
 router.post("/new", middleware.isLogedIn, upload.single("channel_picture"), (req, res)=>{
     if(!ObjectID.isValid(req.user._id)){
         return res.redirect("/");

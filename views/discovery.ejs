@@ -1,6 +1,5 @@
 <% include partials/header %>
 
-      <% include partials/channel_section %>
 <script src="/js/libs/jquery-3.2.1.min.js"></script>
 <script src="/js/libs/bootstrap.min.js"></script>
 <script src="/js/libs/moment.min.js"></script>
@@ -55,11 +54,6 @@
               <h3><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fe799a97a-d5f4-4839-983f-08e686fd1ece.image.png?v=1596596253650" height="300" width="275">     </h3>
               </div>
                </a>
-          
-              <% channels.forEach(function(channel){ %>
-                    <li><a href="/channel/<%=channel._id%>" data-invite-link="https://glitchchord-app.glitch.me/channel/join/<%=channel._id%>"><div class="avatar"><img class="little_avatar" src="<%= channel.channel_picture %>" /></div><%=channel.channel_name%></a></li>
-               <%});%>
-
 
                 
               </div>

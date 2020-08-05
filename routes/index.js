@@ -30,6 +30,15 @@ router.get("/joystick", (req, res)=>{
 })
 
 
+router.get("/discovery", (req, res)=>{
+  if(req.user){
+    res.render('discovery',{title:"server discovery"}) 
+  }else{
+    res.redirect("/users/login")
+  }
+})
+
+
 router.get("/2048", (req, res)=>{
   if(req.user){
     res.render('2048',{title:"2048"}) 
