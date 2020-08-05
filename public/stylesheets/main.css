@@ -1,7 +1,8 @@
 .square {
-  height: 255px;
+  height: 300px;
   width: 150px;
   background-color: #212226;
+  border-radius: 25px;
   float: left
 }
 
@@ -487,6 +488,7 @@ a:focus {
 
 #sidebar {
   position: fixed;
+  overflow: scroll;
   top: 60px;
   left: 0;
   height: calc(100% - 60px);
