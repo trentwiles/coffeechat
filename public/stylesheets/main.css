@@ -1,9 +1,10 @@
 .square {
   height: 300px;
-  width: 150px;
+  width: 170px;
   background-color: #212226;
   border-radius: 25px;
-  float: left
+  float: left;
+  margin: 5px
 }
 
 
