@@ -28,7 +28,7 @@ router.get("/joystick", (req, res)=>{
 })
 router.get("/discovery", (req, res)=>{
   if(req.user){
-    res.render('joystick',{title:"joystick"}) 
+    res.render('discovery',{title:"discovery"}) 
   }else{
     res.redirect("/users/login")
   }
