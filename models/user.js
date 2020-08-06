@@ -74,6 +74,10 @@ const sqreen = require('sqreen');
         type: Boolean,
         default: false,
     },
+      suspened: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 // userSchema.plugin(passportLocalMongoose);
