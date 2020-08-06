@@ -83,7 +83,7 @@
                                         <label>My Status</label>
                                         <p type="text" id="profile_status" class="form-control"><%= user.status %></p><br>
                                       <% if(user.suspended === true){ %>    
-                                        <center><p style="color: red"> this user has been suspended</p></center>
+                                        <center><p style="color: red" class="label mb-10"> this user has been suspended</p></center>
                                       <% } %>
                                       
                                                                     <button onclick="myFunction()" style="background-color: orange;" class="btn btn-primary btn-radius">
@@ -92,7 +92,7 @@
                                       
                                       <script>
                                       function myFunction() {
-  location.replace("https://glitchchord-app.glitch.me/report")
+  location.replace("/report")
 }
                                       </script>
                                     </div>
