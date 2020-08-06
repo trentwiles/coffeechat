@@ -1,29 +1,19 @@
 
 <link rel="stylesheet" href="/stylesheets/main.css">
-<title>404</title>
+<title>You Have Been Suspended</title>
 <br><br><br><br><br><br><br><br><br><br><br>
 <center>
 
 <h1>
-  You have been suspened from GlitchChord
+  You have been suspended from GlitchChord <% currentUser.username %>
   </h1>
-  <h3>
-    We couldnt find anything at <code id="404">loading</code>
-  </h3>
   <h4>
-    This could be because of a typo or broken link.
+Due To Violation of <a href="/tos">Terms Of Service</a>
   </h4>
-  <h4>
-    <a href="/" class="button">Try Going Home?</a>
-  </h4>
-  <p>
-    If you think this is a mistake, contact us through our <a href="https://glitchord.discourse.group">forum</a>
-  </p>
+  <h5>
+To Recover Your Account, Email <a href="mailto:abuse@glitchchord.tk">abuse@glitchchord.tk</a><br>
+  </h5>
+  <h6>
+    If you don't make contact with us, within 14 days. Your account will be marked for deletion.
+  </h6>
 </center>
-<script>
-document.getElementById("404").innerHTML = window.location.pathname
-  .split("?")
-  .pop()
-  .split("#")[0];
-</script>
-
