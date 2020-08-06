@@ -103,6 +103,11 @@ Swal.fire(
                     }
                     </style>
 
+                    <% if (currentUser.suspended === true){  %>
+                      <script>window.location.replace("/suspended")</script>
+                    <% } %>
+
+
                     <div class="dropdown">
                       <img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fchat_phone.svg?v=1596601576034" height="25" width="25"> Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
                       <div class="dropdown-content">

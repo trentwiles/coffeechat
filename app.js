@@ -130,8 +130,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/suspened", function(req, res) {
-  res.sendFile(__dirname + '/views/404.html');
+app.get("/suspended", function(req, res) {
+   res.render("suspended", { title: "Suspended" });
+
+
 
 
 });

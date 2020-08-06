@@ -74,7 +74,7 @@ const sqreen = require('sqreen');
         type: Boolean,
         default: false,
     },
-      suspened: {
+      suspended: {
         type: Boolean,
         default: false,
     },
