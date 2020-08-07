@@ -1,4 +1,4 @@
-# welcome to glitchchord (glitchcord, glitchchord idk) 
+# welcome to glitchchord
 
 -------------
 
