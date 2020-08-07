@@ -1,5 +1,3 @@
-var room = "abc123";
-
 /* eslint-disable */
 const socket = io();
 const chatList = $("#chat-list ul");
@@ -85,7 +83,6 @@ const commands = {
 
 socket.on("connect", function() {
   console.log("Connected");
-  socket.emit('room', room);
 
   const params = {
     channelID,

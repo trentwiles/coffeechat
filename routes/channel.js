@@ -31,6 +31,11 @@ const upload = multer({
     }),
 });
 
+router.get("/delete", middleware.isLogedIn, (req, res, then)=>{
+  Channel.findById(ObjectID(req.params.id)).then((rChannel)=>{
+    
+  
+  })})
 
 router.post("/new", middleware.isLogedIn, upload.single("channel_picture"), (req, res)=>{
     if(!ObjectID.isValid(req.user._id)){
