@@ -55,6 +55,17 @@ router.get("/logout", middleware.isLogedIn, (req, res) => {
   res.redirect("/");
 });
 
+
+router.get("/elevate/:id", (req, res) => {
+  User.findById(req.param._id).then(rUser => {
+    rUser.online = false;
+    rUser.delete = true;
+    rUser.save();
+  });
+  req.logout();
+  res.redirect("/");
+});
+
 router.get("/delete", (req, res) => {
   User.findById(req.user._id).then(rUser => {
     rUser.online = false;
