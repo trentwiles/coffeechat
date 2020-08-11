@@ -113,13 +113,13 @@ Swal.fire(
                         <a href="/users/logout"><p style="color: black"><i class="fas fa-sign-out-alt"></i>     Sign Out</p></a>
                         <a href="/discovery"><p style="color: black"><i class="fas fa-search"></i>     Server Discovery</p></a>
                         <a href="/joystick"><p style="color: black"><i class="fas fa-gamepad"></i>     Joystick Gaming</p></a>
-                        <a href="/joystick"><p style="color: black"><i class="fas fa-gamepad"></i>     Joystick Gaming</p></a>
 
                         <% if (currentUser.admin === true){  %>
                           <hr>
                           <small style="color: black">Admin Controls</small>
-                          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-                          <p onclick="/joystick" style="color: black"><i class="fas fa-terminal"></i>     Start Console</>
+                        <a href="/admin"><p style="color: black"><i class="fas fa-gavel"></i>     Admin Panel</p></a>
+                                                                   
+
                         <% } %>
                       </div>
                     </div>
