@@ -32,6 +32,12 @@ const sqreen = require('sqreen');
           minlength: 1,
           unique: false,
       },
+    connections: {
+          type: String,
+          required: false,
+          minlength: 1,
+          unique: false,
+      },
 
     password: {
         type: String,
