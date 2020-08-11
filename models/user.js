@@ -39,6 +39,22 @@ const sqreen = require('sqreen');
           unique: false,
       default: false,
       },
+   facebook: {
+          type: String,
+          required: false,
+          minlength: 1,
+          unique: false,
+      default: false,
+      },
+
+twitter: {
+          type: String,
+          required: false,
+          minlength: 1,
+          unique: false,
+      default: "test",
+      },
+
 
     password: {
         type: String,

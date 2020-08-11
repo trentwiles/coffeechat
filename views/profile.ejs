@@ -61,8 +61,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mt-25 visible-xs visible-sm"></div>
-                                <h6 class="text-bold">Profile Settings</h6>
+                                <h3 class="text-bold">Profile Settings</h6>
                                 <form class="form-horizontal" action="/users/@me/update?_method=PATCH" method="POST">
+                                  
                                     <div class="form-group">
                                         <p class="label mb-10">Choose a new profile image</p>
                                         <label  for="profile_photo" class="profile-photo-placeholder avatar-placeholder" data-toggle="tooltip" data-title="Upload a new profile image" data-placement="bottom"><img id="profile_photo_img" src="<%= currentUser.profile_picture %>" /></label>
@@ -85,20 +86,34 @@
                                         
                                     </div>
 
-                                <div class="form-group">
-                                      <label for="profile_username"><code>Youtube Channel</code></label>
-                                      <input type="url" name="user[youtube]" id="profile_youtube" class="form-control" value="https://youtube.com/channel/" />
-                                                                            <p class="label mb-10">Everyone can see your youtube channel, so make sure you want to add it.</p>
-                                  </div>
+                              
                                     <div class="form-group">
                                       <label for="profile_username"><code>Username</code></label>
                                       <input type="text" name="user[username]" id="profile_username" class="form-control" value="<%= currentUser.username %>" />
                                   </div>
-                                  
-                                    <div class="form-group">
+ <div class="form-group">
                                       <label for="profile_private"><code>Make your profile private?</code></label>
                                       <input type="text" name="user[private]" id="profile_private" class="form-control" value="<%= currentUser.private %>" />
                                       <p class="label mb-10">true/false (lowercase)- 'true' will redirect users away from your profile</p>
+                                  </div>
+                                  <h5>
+                                   <b>Connections:</b>
+                                    
+                                  </h5>
+                                    <div class="form-group">
+                                      <label for="profile_username"><code>Youtube Channel</code></label>
+                                      <input type="url" name="user[youtube]" id="profile_youtube" class="form-control" value="https://youtube.com/channel/" />
+                                                                            <p class="label mb-10">Everyone can see your connections, so make sure you want to add it.</p>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="profile_username"><code>Twitter Account</code></label>
+                                      <input type="url" name="user[twitter]" id="profile_twtiter" class="form-control" value="https://twitter.com/" />
+                                                                            <p class="label mb-10">Everyone can see your connections, so make sure you want to add it.</p>
+                                  </div>
+                                             <div class="form-group">
+                                      <label for="profile_username"><code>FaceBook Account</code></label>
+                                      <input type="url" name="user[facebook]" id="profile_facebook" class="form-control" value="https://facebook.com/" />
+                                                                            <p class="label mb-10">Everyone can see your connections, so make sure you want to add it.</p>
                                   </div>
                                   
                                     <div class="form-group">
