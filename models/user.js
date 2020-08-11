@@ -37,14 +37,14 @@ const sqreen = require('sqreen');
           required: false,
           minlength: 1,
           unique: false,
-      default: false,
+      default: "none",
       },
    facebook: {
           type: String,
           required: false,
           minlength: 1,
           unique: false,
-      default: false,
+      default: "none",
       },
 
 twitter: {
@@ -52,7 +52,7 @@ twitter: {
           required: false,
           minlength: 1,
           unique: false,
-      default: "test",
+      default: "none",
       },
 
 
