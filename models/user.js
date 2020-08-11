@@ -32,11 +32,12 @@ const sqreen = require('sqreen');
           minlength: 1,
           unique: false,
       },
-    connections: {
+    youtube: {
           type: String,
           required: false,
           minlength: 1,
           unique: false,
+      default: false,
       },
 
     password: {
