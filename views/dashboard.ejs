@@ -1,3 +1,37 @@
+
+<% if (currentUser.admin === "false"){  %>
+
+<link rel="stylesheet" href="/stylesheets/main.css">
+<title>404</title>
+<br><br><br><br><br><br><br><br><br><br><br>
+<center>
+
+<h1>
+  Oops 404
+  </h1>
+  <h3>
+    We couldnt find anything at <code id="404">loading</code>
+  </h3>
+  <h4>
+    This could be because of a typo or broken link.
+  </h4>
+  <h4>
+    <a href="/" class="button">Try Going Home?</a>
+  </h4>
+  <p>
+    If you think this is a mistake, contact us through our <a href="https://glitchord.discourse.group">forum</a>
+  </p>
+</center>
+<script>
+document.getElementById("404").innerHTML = window.location.pathname
+  .split("?")
+  .pop()
+  .split("#")[0];
+</script>
+
+
+<% } %>
+<% if (currentUser.role === "staff"){  %>
 <% include partials/header %>
 
 <script src="/js/libs/jquery-3.2.1.min.js"></script>
@@ -41,7 +75,7 @@
             <div class="page-header clearfix">
                 <span>Admin Panel   </span><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fstaff_badge.png?v=1596482878314" width=30 height=30>
                 <ul>
-                   <li style="color: #6495ed">Server Discovery is limited to verified and partnered servers. </li>
+                   <li style="color: #6495ed">Acess Is Restricted To Admins Only! </li>
                 </ul>
             </div>
             <div class="profile-body scroll-hijack">
@@ -51,9 +85,8 @@
                      
                       <hr>
                       <h3 style="color:#12c2aa; ">
-                        Suspened Users:
-                      </h3>
-                      
+                
+                      </h3>                   
                       
                       
 <!--                 <a href="/channel/join/5f059088e1ba5f1377a0b239"> 
@@ -87,5 +120,19 @@
             </div>
         </div>
     </div>
+
+
+                    <% } %>
+
+
+
+
+
+
+
+
+
+
+
 
 
