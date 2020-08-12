@@ -104,6 +104,7 @@ Swal.fire(
                     </style>
 
                     <% if (currentUser.suspended === true){  %>
+                      <script>window.location.replace("/suspended")</script>
                     <% } %>
                  
                     <div class="dropdown">
@@ -116,9 +117,8 @@ Swal.fire(
                         <% if (currentUser.admin === true){  %>
                           <hr>
                           <small style="color: black">Admin Controls</small>
-                        <a href="/admin"><p style="color: black"><i class="fas fa-gavel"></i>     Admin Panel</p></a>
-                                                                   
-
+                          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+                          <p onclick="eruda.init();eruda.show()" style="color: black"><i class="fas fa-terminal"></i>     Start Console</>
                         <% } %>
                       </div>
                     </div>
@@ -146,22 +146,13 @@ Swal.fire(
                             <label for="group_photo" class="group-photo-placeholder avatar-placeholder" data-toggle="tooltip" data-title="Upload a channel photo" data-placement="bottom"><img id="group_photo_img" src="/img/placeholder.png" /></label>
                             <input id="group_photo" accept="image/*" name="channel_picture" class="group-photo" type="file" />
                         </div>
-                      <div class="form-group"> 
+                        <div class="form-group"> 
                             <label for="group_name">Group Name</label>
-                            <input type="text" name="channel_name" id="group_name" class="form-control" maxlength="30" minlength="5"/>
+                            <input type="text" name="channel_name" id="group_name" class="form-control" />
                         </div>
-                      
-            
                         <div class="form-group">
                             <p class="help-block2 mb-25">By creating a channel, you agree to Protech IT Solutions monitoring your usage and censoring when possible. We believe in kindness and will take the appropiate action against the unlawful user.</p>
-                                                                                                      <% if (currentUser.suspended === false) {  %>
-                                                             <button type="submit" class="btn btn-block btn-radius btn-primary">Create Channel</button>
-                    <% } %>  
-                                        <% if (currentUser.suspended === true) {  %>
-                          <h6 style="color:red;">
-                            Suspened Users Cannot Create Channels
-                          </h6>
-                    <% } %>  
+                            <button type="submit" class="btn btn-block btn-radius btn-primary">Create Channel</button>
                         </div>
                     </form>
                 </div>
@@ -171,53 +162,3 @@ Swal.fire(
     <% }else { %>
 
     <% } %>
-  
-  
-     
-        <div id="check-server" class="modal-block-wrap">
-            <div class="modal-block">
-              
-                <div class="modal-block-content">
-                    <span class="modal-close"><i class="fas fa-times"></i></span>
-                    <h3>View A Server's Info</h3>
-<!--                     <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="/channel/new"> -->
-                     
-                        <div class="form-group"> 
-                            <label for="group_name">Server Invite Link</label>
-                            <input type="text" value="https://glitchchord-app.glitch.me/channel/join/" name="channel_name" id="group_name" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <p class="help-block2 mb-25">Make sure the invite link is valid. </p>
-                            <button type="submit" class="btn btn-block btn-radius btn-primary">View Info</button>
-                        </div>
-<!--                     </form> -->
-                </div>
-            </div>
-        </div>
-
-  
-    <div id="suspened-user" class="modal-block-wrap">
-            <div class="modal-block">
-              
-                <div class="modal-block-content">
-                    <span class="modal-close"><i class="fas fa-times"></i></span>
-                    <h3>Suspend A User</h3>
-<!--                     <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="/channel/new"> -->
-                     
-                        <div class="form-group"> 
-                            <label for="group_name">Username Of User To Suspend</label>
-                            <input type="text" name="channel_name" id="group_name" class="form-control" />
-                        </div>
-                  <div class="form-group"> 
-                            <label for="group_name">Reason To Suspened</label>
-                            <input type="text" name="channel_name" id="group_name" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <p class="help-block2 mb-25">Do not abuse this service. </p>
-                            <button type="submit" class="btn btn-block btn-radius btn-danger">Suspend User</button>
-                        </div>
-<!--                     </form> -->
-                </div>
-            </div>
-        </div>
-

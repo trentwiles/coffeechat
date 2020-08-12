@@ -1,4 +1,5 @@
 # welcome to glitchchord
+
 -------------
 
 <b>The free and open-source discord clone powered by socket.io, mongodb, ejs and express</b>
