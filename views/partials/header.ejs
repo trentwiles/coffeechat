@@ -146,20 +146,27 @@ Swal.fire(
                             <label for="group_photo" class="group-photo-placeholder avatar-placeholder" data-toggle="tooltip" data-title="Upload a channel photo" data-placement="bottom"><img id="group_photo_img" src="/img/placeholder.png" /></label>
                             <input id="group_photo" accept="image/*" name="channel_picture" class="group-photo" type="file" />
                         </div>
-                        <div class="form-group"> 
+                                    <% if (currentUser.suspended === false) {  %>
+                      <div class="form-group"> 
                             <label for="group_name">Group Name</label>
-                            <input type="text" name="channel_name" id="group_name" class="form-control" />
+                            <input type="text" name="channel_name" id="group_name" class="form-control" maxlength="30" minlength="5"/>
                         </div>
+                    <% } %>  
+                            <% if (currentUser.suspended === true) {  %>
+                      <div class="form-group"> 
+                            <label for="group_name">Group Name</label>
+                            <input type="text" name="channel_name" id="group_name" class="form-control" maxlength="0"/>
+                        </div>
+                    <% } %>  
                         <div class="form-group">
                             <p class="help-block2 mb-25">By creating a channel, you agree to Protech IT Solutions monitoring your usage and censoring when possible. We believe in kindness and will take the appropiate action against the unlawful user.</p>
                                                                                                       <% if (currentUser.suspended === false) {  %>
                                                              <button type="submit" class="btn btn-block btn-radius btn-primary">Create Channel</button>
                     <% } %>  
                                         <% if (currentUser.suspended === true) {  %>
-                                                             <button type="submit" class="btn btn-block btn-radius btn-primary" disabled>Create Channel</button>
-                          <p style="color:red;">
+                          <h6 style="color:red;">
                             Suspened Users Cannot Create Channels
-                          </p>
+                          </h6>
                     <% } %>  
                         </div>
                     </form>
