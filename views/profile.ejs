@@ -125,17 +125,22 @@
                                       <label for="profile_c_password"><code>Confirm Password</code></label>
                                         <input type="password" name="profile_c_password" id="profile_c_password" class="form-control" value="johndoe" />
                                     </div>
-                                  
-                                    <div class="form-group">
+                                                              <% if (currentUser.suspended === true){  %>
+                                  <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-radius" disabled>Save Changes</button>
+                                  </div>
+                    <% } %>
+                                          <% if (currentUser.suspended === false){  %>
+                                  <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-radius">Save Changes</button>
                                   </div>
+                    <% } %>
                               </form>
-                          <h6 class="text-bold">Danger Zone</h6><br>
-                             <button style="background-color: red;" onclick='alert("your account has been marked for deletion, after a few days all data tied with your user will be deleted. Sign back in to revert your changes");defresh("/users/delete", "replace")' class="btn btn-primary btn-radius">
+                             <button style="background-color: red;" onclick='alert("your account has been marked for deletion, after a few days all data tied with your user will be deleted. Sign back in to revert your changes");defresh("/users/delete", "replace")' class="btn btn-primary btn-radius" >
                                 delete account
                                </button><br><br>
-                              
-                                  
+                      
+                                         
 <!--                                             <li><a onclick="ban" data-no-defresh class="join-server" data-start="modal-custom" data-target="#create-group" data-title="Report User"> </a></li> -->
 
                               </div>

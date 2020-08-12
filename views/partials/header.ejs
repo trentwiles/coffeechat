@@ -104,7 +104,6 @@ Swal.fire(
                     </style>
 
                     <% if (currentUser.suspended === true){  %>
-                      <script>window.location.replace("/suspended")</script>
                     <% } %>
                  
                     <div class="dropdown">
@@ -153,7 +152,15 @@ Swal.fire(
                         </div>
                         <div class="form-group">
                             <p class="help-block2 mb-25">By creating a channel, you agree to Protech IT Solutions monitoring your usage and censoring when possible. We believe in kindness and will take the appropiate action against the unlawful user.</p>
-                            <button type="submit" class="btn btn-block btn-radius btn-primary">Create Channel</button>
+                                                                                                      <% if (currentUser.suspended === false) {  %>
+                                                             <button type="submit" class="btn btn-block btn-radius btn-primary">Create Channel</button>
+                    <% } %>  
+                                        <% if (currentUser.suspended === true) {  %>
+                                                             <button type="submit" class="btn btn-block btn-radius btn-primary" disabled>Create Channel</button>
+                          <p style="color:red;">
+                            Suspened Users Cannot Create Channels
+                          </p>
+                    <% } %>  
                         </div>
                     </form>
                 </div>
@@ -180,9 +187,36 @@ Swal.fire(
                         </div>
                         <div class="form-group">
                             <p class="help-block2 mb-25">Make sure the invite link is valid. </p>
-                            <button type="submit" class="btn btn-block btn-radius btn-danger">Create Channel</button>
+                            <button type="submit" class="btn btn-block btn-radius btn-primary">View Info</button>
                         </div>
 <!--                     </form> -->
                 </div>
             </div>
         </div>
+
+  
+    <div id="suspened-user" class="modal-block-wrap">
+            <div class="modal-block">
+              
+                <div class="modal-block-content">
+                    <span class="modal-close"><i class="fas fa-times"></i></span>
+                    <h3>Suspend A User</h3>
+<!--                     <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="/channel/new"> -->
+                     
+                        <div class="form-group"> 
+                            <label for="group_name">Username Of User To Suspend</label>
+                            <input type="text" name="channel_name" id="group_name" class="form-control" />
+                        </div>
+                  <div class="form-group"> 
+                            <label for="group_name">Reason To Suspened</label>
+                            <input type="text" name="channel_name" id="group_name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <p class="help-block2 mb-25">Do not abuse this service. </p>
+                            <button type="submit" class="btn btn-block btn-radius btn-danger">Suspend User</button>
+                        </div>
+<!--                     </form> -->
+                </div>
+            </div>
+        </div>
+
