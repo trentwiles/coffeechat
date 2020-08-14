@@ -90,7 +90,7 @@
 body {
   font-family: "Circular Std", sans-serif;
   font-size: 14px;
-  background: #061a33;
+  background: #0c0c0c;
   color: #ffffff; }
 
   .current-server img{
@@ -104,7 +104,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #061A33; }
+  background: #0c0c0c; }
   #bg:before {
     content: "";
     position: absolute;
@@ -114,12 +114,12 @@ body {
             transform: translateY(-50%) translateX(-25%);
     width: 200%;
     height: 100%;
-    background: #0a284d;
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #0a284d), color-stop(51%, #061a33), color-stop(100%, #061a33));
+    background: #0c0c0c;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #0c0c0c), color-stop(51%, #0c0c0c), color-stop(100%, #0c0c0c));
     background: -webkit-radial-gradient(center, ellipse cover, #0a284d 0%, #061a33 51%, #061a33 100%);
     background: -webkit-radial-gradient(center ellipse, #0a284d 0%, #061a33 51%, #061a33 100%);
     background: radial-gradient(ellipse at center, #0a284d 0%, #061a33 51%, #061a33 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a284d', endColorstr='#061a33', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c0c0c', endColorstr='#0c0c0c', GradientType=1);
     -webkit-animation: pulse 3s ease infinite;
             animation: pulse 3s ease infinite; }
 
@@ -522,11 +522,11 @@ a:focus {
     background: rgba(255, 255, 255, 0.04);
     color: rgba(255, 255, 255, 0.6); }
   .sidebar-menu .current-server {
-    background-color: #061a33;
+    background-color: #0c0c0c;
     font-family: "uni_sansheavy_caps", sans-serif;
     font-size: 24px; }
   .sidebar-menu .current-server:hover {
-    background-color: #061a33; }
+    background-color: #0c0c0c; }
   .sidebar-menu .join-server {
     background: transparent;
     border: 1px dashed rgba(255, 255, 255, 0.4);
@@ -569,7 +569,7 @@ a:focus {
   left: 52px;
   top: 60px;
   width: 240px;
-  background: #172c48;
+  background: #111111;
   height: calc(100% - 60px);
   -webkit-transform: translateX(calc(-100% - 52px));
           transform: translateX(calc(-100% - 52px));
@@ -653,7 +653,7 @@ a:focus {
     margin-top: 4px; }
 
 .friend-list {
-  background-color: #172c48;
+  background-color: #0c0c0c;
   border-radius: 6px;
   padding: 5px;
   min-height: 120px;
@@ -663,7 +663,7 @@ a:focus {
     margin: 0; }
 
 .groups-list {
-  background-color: #172c48;
+  background-color: #0c0c0c;
   border-radius: 6px;
   padding: 5px;
   min-height: 120px;
@@ -693,8 +693,8 @@ a:focus {
       position: absolute;
       bottom: -3.5px;
       right: -3.5px;
-      background-color: #22c287;
-      border: 3px solid #2F425B;
+      background-color: #0c0c0c;
+      border: 3px solid #0c0c0c;
       border-radius: 100%;
       width: 14px;
       height: 14px;
@@ -702,7 +702,7 @@ a:focus {
 
 .page-header {
   padding: 10px 15px;
-  background-color: #1f324c;
+  background-color: #0c0c0c;
   margin: 0;
   border: 0; }
   .page-header ul {
@@ -721,9 +721,9 @@ a:focus {
   .page-header ul li a:hover {
     color: #fff; }
   .page-header ul li:last-of-type a:hover {
-    color: #35ecd3; }
+    color: #0c0c0c; }
   .page-header > span {
-    color: #ffffff;
+    color: #0c0c0c;
     font-weight: 700; }
 
 .chat-body {
@@ -753,7 +753,7 @@ a:focus {
   .chat-message-date {
     font-size: 0.875em; }
   .chat-message-author:hover {
-    color: #35ecd3; }
+    color: #0c0c0c; }
   .chat-message .chat-message-message {
     color: rgba(255, 255, 255, 0.8); }
 
@@ -783,7 +783,7 @@ a:focus {
 
 .chat-footer {
   padding: 30px;
-  background-color: #10243E; }
+  background-color: #242424; }
   .chat-footer input {
     background: rgba(255, 255, 255, 0.05);
     border: 0;
@@ -827,7 +827,7 @@ a:focus {
     font-size: 1.25em;
     border-radius: 10px 10px 0 0; }
   .invitation-info {
-    background-color: #0f2239;
+    background-color: #141414;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -896,12 +896,12 @@ a:focus {
 .decline {
   font-weight: 700;
   font-size: 0.875em;
-  color: #ff355a; }
+  color: #141414; }
   .decline:hover {
-    color: #ff355a;
+    color: #141414;
     text-decoration: underline; }
   .decline.link-underline:before {
-    background-color: #ff355a; }
+    background-color: #141414; }
 
 .link-underline {
   text-underline: none;
