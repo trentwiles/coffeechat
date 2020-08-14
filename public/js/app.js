@@ -416,7 +416,7 @@ $(function () {
             "line_linked": {
                 "enable": false,
                 "distance": 150,
-                "color": "#ffffff",
+                "color": "#2f2f2f",
                 "opacity": 0.4,
                 "width": 1
             },
