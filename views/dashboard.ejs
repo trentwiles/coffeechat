@@ -1,0 +1,79 @@
+
+<% include partials/header %>
+
+<script src="/js/libs/jquery-3.2.1.min.js"></script>
+<script src="/js/libs/bootstrap.min.js"></script>
+<script src="/js/libs/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+<script src="/js/app.js?rev=@@hash"></script>
+<link href="/stylesheets/fontawesome-all.min.css" rel="stylesheet">
+<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+<link href="/stylesheets/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="/stylesheets/main.css?rev=@@hash" rel="stylesheet">
+<link href="/stylesheets/main-responsive.css?rev=@@hash" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-borderless@3.2.0/borderless.min.css">
+<script src="https://defresh.js.org/defresh.js"></script>
+<link rel="stylesheet" href="joystick-beta.glitch.me/style.css">
+<script src="/js/unload.js"></script>
+<script src="/js/secure.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+[if lt IE 9]
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+[endif]
+  <div id="page">
+    <div id="chat-list">
+            <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
+                  <a href="#" class="user">Your are an admin! 
+
+</a>
+
+
+               
+
+        </div>
+        
+        <div id="profile" class="page">
+            <div class="page-header clearfix">
+                <span>Admin Panel   </span><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fstaff_badge.png?v=1596482878314" width=30 height=30>
+                <ul>
+                   <li style="color: #6495ed">Acess Is Restricted To Admins Only! </li>
+                </ul>
+            </div>
+            <div class="profile-body scroll-hijack">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1>Admin Panel</h1>
+<h6 style="color:red;">
+Do not abuse the admin panel. Abusing will result in a ban.
+                      </h6>                     
+                      <hr>
+                      <h3>
+            Popular Tools
+                      </h3>   <br>           
+   <a href="#" data-no-defresh data-start="modal-custom" data-target="#check-server" data-toggle="tooltip" data-placement="right"  class="btn btn-radius btn-primary">View Server Info</a>
+
+   <a href="#" data-no-defresh data-start="modal-custom" data-target="#suspened-user" data-toggle="tooltip" data-placement="right"  class="btn btn-radius btn-warning">Suspend A User</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+]
+
+
+
+
+
+
+
+
+
+

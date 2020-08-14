@@ -12,7 +12,8 @@ const sqreen = require('sqreen');
         minlength: 1,
     },
     role: {
-      type: String
+      type: String,
+      default: false,
     },
     email: {
         type: String,
@@ -31,6 +32,29 @@ const sqreen = require('sqreen');
           minlength: 1,
           unique: false,
       },
+    youtube: {
+          type: String,
+          required: false,
+          minlength: 1,
+          unique: false,
+      default: "none",
+      },
+   facebook: {
+          type: String,
+          required: false,
+          minlength: 1,
+          unique: false,
+      default: "none",
+      },
+
+twitter: {
+          type: String,
+          required: false,
+          minlength: 1,
+          unique: false,
+      default: "none",
+      },
+
 
     password: {
         type: String,
