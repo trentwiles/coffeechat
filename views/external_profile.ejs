@@ -62,6 +62,14 @@
                 <!-- <ul>
                     <li><a title="Online" href="#">Online - 1</a></li>
                 </ul> -->
+              <% if(user.online === true){ %>    
+                  <span><p style="color: green;float: right;" class="label mb-10"> This user is online!</p></span>
+             <% } %>
+              <% if(user.online === false){ %>    
+                   <span><p style="color: red;float: right;" class="label mb-10"> Like my internet, this user is offline</p></span>
+              <% } %>
+                                      
+                                      
             </div>
             <div class="profile-body scroll-hijack">
                 <div class="row">
@@ -85,13 +93,6 @@
                                       <% if(user.suspended === true){ %>    
                                         <center><p style="color: red" class="label mb-10"> This user has been suspended</p></center>
                                       <% } %>
-                                      <% if(user.online === true){ %>    
-                                        <center><p style="color: green" class="label mb-10"> This user is online!</p></center>
-                                      <% } %>
-                                      <% if(user.online === false){ %>    
-                                        <center><p style="color: red" class="label mb-10"> Like my internet, this user is offline</p></center>
-                                      <% } %>
-                                      
                                       
                                       <button onclick="myFunction()" style="background-color: orange;" class="btn btn-primary btn-radius">
                                          <i class="fas fa-ban"></i> report abuse <%= user.username %>
