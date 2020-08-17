@@ -83,17 +83,24 @@
                                         <label>My Status</label>
                                         <p type="text" id="profile_status" class="form-control"><%= user.status %></p><br>
                                       <% if(user.suspended === true){ %>    
-                                        <center><p style="color: red" class="label mb-10"> this user has been suspended</p></center>
+                                        <center><p style="color: red" class="label mb-10"> This user has been suspended</p></center>
+                                      <% } %>
+                                      <% if(user.online === true){ %>    
+                                        <center><p style="color: green" class="label mb-10"> This user is online!</p></center>
+                                      <% } %>
+                                      <% if(user.online === false){ %>    
+                                        <center><p style="color: red" class="label mb-10"> Like my internet, this user is offline</p></center>
                                       <% } %>
                                       
-                                                                    <button onclick="myFunction()" style="background-color: orange;" class="btn btn-primary btn-radius">
-                               <i class="fas fa-ban"></i> report abuse <%= user.username %>
-                               </button>
                                       
+                                      <button onclick="myFunction()" style="background-color: orange;" class="btn btn-primary btn-radius">
+                                         <i class="fas fa-ban"></i> report abuse <%= user.username %>
+                                       </button>
+
                                       <script>
                                       function myFunction() {
-  location.replace("/report")
-}
+                                        location.replace("/report")
+                                      }
                                       </script>
                                     </div>
                                 </div>
