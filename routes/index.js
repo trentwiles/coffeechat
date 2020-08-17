@@ -46,6 +46,14 @@ router.get("/2048", (req, res)=>{
     res.redirect("/users/login")
   }
 })
+
+router.get("/dino", (req, res)=>{
+  if(req.user){
+    res.render('dino',{title:"Dino game!"}) 
+  }else{
+    res.redirect("/users/login")
+  }
+})
 router.get("/report", (req, res)=>{
   if(req.user){
     res.render('report-abuse',{title:"Report User"}) 
