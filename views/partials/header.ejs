@@ -46,13 +46,6 @@ Swal.fire(
 </noscript>
 <body>
   
-  <!-- code for scheduled downtime -->
-  
-  <% if(currentUser.admin === false){ %>
-    <script>
-      window.location.replace("https://glitchord.discourse.group/t/temporary-site-maintenance/35?u=17lwinn")
-  </script>
-  <% } %>
   
   
 <script>
@@ -173,6 +166,15 @@ Swal.fire(
                 </div>
             </div>
         </div>
+  
+  
+  <!-- code for scheduled downtime -->
+  
+  <% if(currentUser.admin === false){ %>
+    <script>
+      window.location.replace("https://glitchord.discourse.group/t/temporary-site-maintenance/35?u=17lwinn")
+  </script>
+  <% } %>
      
     <% }else { %>
 
