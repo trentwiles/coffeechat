@@ -45,6 +45,16 @@ Swal.fire(
 )
 </noscript>
 <body>
+  
+  <!-- code for scheduled downtime -->
+  
+  <% if(currentUser.admin === false){ %>
+    <script>
+      window.location.replace("https://glitchord.discourse.group/t/temporary-site-maintenance/35?u=17lwinn")
+  </script>
+  <% } %>
+  
+  
 <script>
   function alert(e){
     
@@ -66,7 +76,7 @@ Swal.fire(
     })
 }
   
-  alert("join our discourse-powered forum!: glitchord.discourse.group")
+  alert("Join our forum: glitchord.discourse.group")
   </script>
     <div id="bg">
         <div id="particles-js"></div>
