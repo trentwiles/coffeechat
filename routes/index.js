@@ -28,13 +28,7 @@ router.get("/joystick", (req, res)=>{
     res.redirect("/users/login")
   }
 })
-router.get("/market", (req, res)=>{
-  if(req.user){
-    res.render('marketplace',{title:"Marketplace"}) 
-  }else{
-    res.redirect("/users/login")
-  }
-})
+
 
 router.get("/discovery", (req, res)=>{
   if(req.user){
