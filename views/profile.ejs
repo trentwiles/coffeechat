@@ -118,7 +118,27 @@
                                       <label for="profile_c_password"><code>Confirm Password</code></label>
                                         <input type="password" name="profile_c_password" id="profile_c_password" class="form-control" value="johndoe" />
                                     </div>
-                                  
+                                    <script>
+                        function showpass() {
+                          var x = document.getElementById("profile_password");
+                          if (x.type === "password") {
+                            x.type = "text";
+                          } else {
+                            x.type = "password";
+                          }
+                        }
+
+                        function showpass2(){
+                          var x = document.getElementById("profile_c_password");
+                            if (x.type === "password") {
+                              x.type = "text";
+                            } else {
+                            x.type = "password";
+                          }
+                        }
+                        </script>
+                      <input type="checkbox" onclick="showpass();showpass2()">Show Password
+
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-radius">Save Changes</button>
                                   </div>
