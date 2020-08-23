@@ -28,9 +28,9 @@ router.get("/joystick", (req, res)=>{
     res.redirect("/users/login")
   }
 })
-router.get("/glitchchord+", (req, res)=>{
+router.get("/glitchchordplus", (req, res)=>{
   if(req.user){
-    res.render('glitchchord+',{title:"GlitchChord +"}) 
+    res.render('glitchchordplus',{title:"GlitchChord +"}) 
   }else{
     res.redirect("/users/login")
   }
