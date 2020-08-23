@@ -28,6 +28,13 @@ router.get("/joystick", (req, res)=>{
     res.redirect("/users/login")
   }
 })
+router.get("/glitchchord+", (req, res)=>{
+  if(req.user){
+    res.render('glitchchord+',{title:"GlitchChord +"}) 
+  }else{
+    res.redirect("/users/login")
+  }
+})
 router.get("/market", (req, res)=>{
   if(req.user){
     res.render('marketplace',{title:"Marketplace"}) 

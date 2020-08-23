@@ -1,0 +1,104 @@
+<% include partials/header %>
+
+<script src="/js/libs/jquery-3.2.1.min.js"></script>
+<script src="/js/libs/bootstrap.min.js"></script>
+<script src="/js/libs/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/js/libs/jquery.mCustomScrollbar.min.js"></script>
+<script src="/js/app.js?rev=@@hash"></script>
+<link href="/stylesheets/fontawesome-all.min.css" rel="stylesheet">
+<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+<link href="/stylesheets/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="/stylesheets/main.css?rev=@@hash" rel="stylesheet">
+<link href="/stylesheets/main-responsive.css?rev=@@hash" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-borderless@3.2.0/borderless.min.css">
+<script src="https://defresh.js.org/defresh.js"></script>
+<link rel="stylesheet" href="joystick-beta.glitch.me/style.css">
+<script src="/js/unload.js"></script>
+<script src="/js/secure.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+[if lt IE 9]
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+[endif]
+  <div id="page">
+        <div id="chat-list">
+            <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
+            <center>
+              <a href="/">
+                <button style="color: black">
+                Return to Glitchchord
+                </button>
+              </a>
+          </center>
+            <ul class="chat-list scroll-hijack">
+            </ul>
+        </div>
+        <div id="profile" class="page">
+            <div class="page-header clearfix">
+                <span>Report a user</span>
+                <ul>
+                   <li style="color: #6495ed">BETA FEATURE</li>
+                </ul>
+            </div>
+            <div class="profile-body scroll-hijack">
+                                        <h4>Report Abuse</h4>
+
+              
+                 <div class="modal-block-content">
+                    <div class="form-group">
+                        <label for="email">Username</label>
+                        <input type="name" value="<%= currentUser.username %>" name="abuse-name" id="email" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">How did they violate our Terms of Service and/or Community Guidelines?</label>
+                        <input type="name" name="how-violate?" id="password" class="form-control" required/>
+                    </div>
+                            <div class="form-group">
+                        <label for="password">Your Username</label>
+                        <input type="name" name="username" id="password" class="form-control" required/>
+                    </div>
+                          
+                    <div class="form-group">
+                      
+                        <button type="submit" class="btn btn-block btn-radius btn-danger"><i class="fas fa-ban"></i> Report Abuse</button>
+                    <br>
+                      <p>
+                        <b>NOTE:</b> You may not spam Glitchord, especially our Trust & Safety teams. Making false and malicious reports, sending multiple reports about the same issue, or asking a group of users to all report the same content may lead to action being taken on your account.
+
+                      </p>
+                      
+                      <p class="help-block2 mb-25">‎</a>
+                      
+                  </div>
+                </form>
+            </div>
+
+                
+              </div>
+              <style>
+                    .joystickbeta{
+                          background-color: #12C2AA;
+                          font-color:black;
+                          font-size: 50px;
+
+      }
+                .smalljoy{
+                  font-size: 30px;
+                }
+               </style>
+<!--                       <div style="width:100%;height:100%;"  class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://joystick-beta.glitch.me">
+                          There was an error loading the game. Try to reload?
+                        </iframe>
+                      </div>   -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<% include partials/footer %>
