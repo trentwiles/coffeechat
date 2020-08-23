@@ -1050,10 +1050,7 @@ a:focus {
   position: relative;
   min-width: 150px;
   background-color: #12c2aa; }
-.modal-brand-alert {
-  position: relative;
-  min-width: 150px;
-  background-color: red; }
+
   .modal-brand:before {
     content: "";
     position: absolute;
