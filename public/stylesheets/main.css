@@ -1,7 +1,7 @@
 .square {
   height: 300px;
   width: 170px;
-  background-color: #212226;
+  background-color: #242424;
   border-radius: 25px;
   float: left;
   margin: 5px
@@ -115,10 +115,10 @@ body {
     width: 200%;
     height: 100%;
     background: #0c0c0c;
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #0c0c0c), color-stop(51%, #0c0c0c), color-stop(100%, #0c0c0c));
-    background: -webkit-radial-gradient(center, ellipse cover, #0a284d 0%, #061a33 51%, #061a33 100%);
-    background: -webkit-radial-gradient(center ellipse, #0a284d 0%, #061a33 51%, #061a33 100%);
-    background: radial-gradient(ellipse at center, #0a284d 0%, #061a33 51%, #061a33 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #141414), color-stop(51%, #0c0c0c), color-stop(100%, #141414));
+    background: -webkit-radial-gradient(center, ellipse cover, #141414 0%, #141414 51%, #141414 100%);
+    background: -webkit-radial-gradient(center ellipse, #141414 0%, #141414 51%, #141414 100%);
+    background: radial-gradient(ellipse at center, #141414 0%, #141414 51%, #141414 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c0c0c', endColorstr='#0c0c0c', GradientType=1);
     -webkit-animation: pulse 3s ease infinite;
             animation: pulse 3s ease infinite; }
@@ -693,8 +693,8 @@ a:focus {
       position: absolute;
       bottom: -3.5px;
       right: -3.5px;
-      background-color: #0c0c0c;
-      border: 3px solid #0c0c0c;
+      background-color: #22c287;
+      border: 3px solid #2F425B;
       border-radius: 100%;
       width: 14px;
       height: 14px;
@@ -702,7 +702,7 @@ a:focus {
 
 .page-header {
   padding: 10px 15px;
-  background-color: #0c0c0c;
+  background-color: #141414;
   margin: 0;
   border: 0; }
   .page-header ul {
@@ -721,9 +721,9 @@ a:focus {
   .page-header ul li a:hover {
     color: #fff; }
   .page-header ul li:last-of-type a:hover {
-    color: #0c0c0c; }
+    color: #35ecd3; }
   .page-header > span {
-    color: #0c0c0c;
+    color: #ffffff;
     font-weight: 700; }
 
 .chat-body {
@@ -753,7 +753,7 @@ a:focus {
   .chat-message-date {
     font-size: 0.875em; }
   .chat-message-author:hover {
-    color: #0c0c0c; }
+    color: #35ecd3; }
   .chat-message .chat-message-message {
     color: rgba(255, 255, 255, 0.8); }
 
@@ -820,14 +820,14 @@ a:focus {
   -webkit-animation: bounce-invitation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.6s;
           animation: bounce-invitation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.6s; }
   .invitation-header {
-    background-color: #0d1d31;
+    background-color: #242424;
     padding: 15px 15px;
     text-align: center;
     font-family: "uni_sansheavy_caps", sans-serif;
     font-size: 1.25em;
     border-radius: 10px 10px 0 0; }
   .invitation-info {
-    background-color: #141414;
+    background-color: #242424;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -896,12 +896,12 @@ a:focus {
 .decline {
   font-weight: 700;
   font-size: 0.875em;
-  color: #141414; }
+  color: #ff355a; }
   .decline:hover {
-    color: #141414;
+    color: #ff355a;
     text-decoration: underline; }
   .decline.link-underline:before {
-    background-color: #141414; }
+    background-color: #ff355a; }
 
 .link-underline {
   text-underline: none;
@@ -994,7 +994,7 @@ a:focus {
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   width: 100%;
   max-width: 660px;
-  background-color: #1c2f48;
+  background-color: #242424;
   box-shadow: 0 0 24px rgba(17, 17, 26, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1313,7 +1313,7 @@ section[class].vh-25 {
   height: auto; }
 
 .bg-white {
-  background-color: #ffffff; }
+  background-color: #242424; }
 
 .inline-block {
   display: inline-block; }
