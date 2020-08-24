@@ -35,6 +35,13 @@ router.get("/glitchchordplus", (req, res)=>{
     res.redirect("/users/login")
   }
 })
+router.get("/premium", (req, res)=>{
+  if(req.user){
+    res.render('premium',{title:"GLitchord Premium"}) 
+  }else{
+    res.redirect("/users/login")
+  }
+})
 router.get("/market", (req, res)=>{
   if(req.user){
     res.render('marketplace',{title:"Marketplace"}) 
