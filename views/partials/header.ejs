@@ -45,6 +45,9 @@ Swal.fire(
 )
 </noscript>
 <body>
+  
+  
+  
 <script>
   function alert(e){
     
@@ -61,11 +64,12 @@ Swal.fire(
     })
 
     Toast.fire({
-      icon: 'error',
+      icon: 'info',
       title: e
     })
 }
-  alert('Glitchchord development shuts down on September the 1st'); 
+  
+  alert("Join our forum: glitchord.discourse.group")
   </script>
     <div id="bg">
         <div id="particles-js"></div>
@@ -74,7 +78,7 @@ Swal.fire(
     <nav class="navbar" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" style="color:red;"href="https://support.glitch.com/t/mega-thread-glitchchord-mongodb-discord-clone/20463/354?u=shadowdev">Glitchchord Is Discontinued.
+              <a href="/" class="navbar-brand">Glitchchord</a>
                 
                 </font> </a>
                   
@@ -112,7 +116,7 @@ Swal.fire(
                     <% } %>
                  
                     <div class="dropdown">
-                      <img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fchat_phone.svg?v=1596601576034" height="25" width="25"> Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
+                      <span> Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
                       <div class="dropdown-content">
                         <a href="/users/logout"><p style="color: black"><i class="fas fa-sign-out-alt"></i>     Sign Out</p></a>
                         <a href="/discovery"><p style="color: black"><i class="fas fa-search"></i>     Server Discovery</p></a>
@@ -162,7 +166,64 @@ Swal.fire(
                 </div>
             </div>
         </div>
-     
+  <div id="reset-pass" class="modal-block-wrap">
+            <div class="modal-block">
+                <div style="background-color: red" class="modal-brand">
+                    <div class="modal-brand-caption">
+                      <div class="logo">Alert</div>
+                    </div>
+                </div>
+                <div class="modal-block-content">
+                    <span class="modal-close"><i class="fas fa-times"></i></span>
+                    <h3>Reset Your Password</h3>
+                    <p class="help-block2 mb-25">In response to a recent security breach, all users must reset their password here</p>
+                    <p class="help-block2 mb-25">We advise you to do so, all passwords will encrypted with bcrypt, failure to change it could put your account safety at risk</p>
+                    <form class="form-horizontal" action="/users/@me/update?_method=PATCH" method="POST">
+                    <div class="form-group"> 
+                      <label for="group_name">New Password</label>
+                      <input type="password" name="profile_password" id="profile_password" class="form-control" value="" />
+                    </div>
+                    <div class="form-group"> 
+                      <label for="group_name">Confirm New Password</label>
+                      <input type="password" name="profile_c_password" id="profile_c_password" class="form-control" value="" />
+                     </div>
+                      <script>
+                      function showpass() {
+                        var x = document.getElementById("profile_password");
+                        if (x.type === "password") {
+                          x.type = "text";
+                        } else {
+                          x.type = "password";
+                        }
+                      }
+                        
+                      function showpass2(){
+                        var x = document.getElementById("profile_c_password");
+                          if (x.type === "password") {
+                            x.type = "text";
+                          } else {
+                          x.type = "password";
+                        }
+                      }
+                      </script>
+                    <input type="checkbox" onclick="showpass();showpass2()">Show Password
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-radius btn-primary">Change Password</button>
+                    </div>
+                      <p class="help-block2 mb-25"><b>Already changed?</b> press the cross in the top right corner.</p>
+                  </form>
+                </div>
+            </div>
+        </div>
+ 
+  
+  
+  <!-- code for scheduled downtime -->
+  
+<!--     <script>
+      window.location.replace("https://glitchord.discourse.group/t/temporary-site-maintenance/35?u=17lwinn")
+  </script>
+      -->
     <% }else { %>
 
     <% } %>

@@ -1,7 +1,7 @@
 .square {
-  height: 300px;
-  width: 170px;
-  background-color: #242424;
+  height: 400px;
+  width: 270px;
+  background-color: #212226;
   border-radius: 25px;
   float: left;
   margin: 5px
@@ -53,6 +53,7 @@
 .dropup:hover .dropbtn {
   background-color: #2980B9;
 }
+
 @font-face {
   font-family: 'Circular Std';
   src: url("../fonts/CircularStd-Book.eot");
@@ -90,7 +91,7 @@
 body {
   font-family: "Circular Std", sans-serif;
   font-size: 14px;
-  background: #0c0c0c;
+  background: #061a33;
   color: #ffffff; }
 
   .current-server img{
@@ -104,7 +105,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #0c0c0c; }
+  background: #061A33; }
   #bg:before {
     content: "";
     position: absolute;
@@ -114,12 +115,12 @@ body {
             transform: translateY(-50%) translateX(-25%);
     width: 200%;
     height: 100%;
-    background: #0c0c0c;
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #141414), color-stop(51%, #0c0c0c), color-stop(100%, #141414));
-    background: -webkit-radial-gradient(center, ellipse cover, #141414 0%, #141414 51%, #141414 100%);
-    background: -webkit-radial-gradient(center ellipse, #141414 0%, #141414 51%, #141414 100%);
-    background: radial-gradient(ellipse at center, #141414 0%, #141414 51%, #141414 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c0c0c', endColorstr='#0c0c0c', GradientType=1);
+    background: #0a284d;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #0a284d), color-stop(51%, #061a33), color-stop(100%, #061a33));
+    background: -webkit-radial-gradient(center, ellipse cover, #0a284d 0%, #061a33 51%, #061a33 100%);
+    background: -webkit-radial-gradient(center ellipse, #0a284d 0%, #061a33 51%, #061a33 100%);
+    background: radial-gradient(ellipse at center, #0a284d 0%, #061a33 51%, #061a33 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a284d', endColorstr='#061a33', GradientType=1);
     -webkit-animation: pulse 3s ease infinite;
             animation: pulse 3s ease infinite; }
 
@@ -522,11 +523,11 @@ a:focus {
     background: rgba(255, 255, 255, 0.04);
     color: rgba(255, 255, 255, 0.6); }
   .sidebar-menu .current-server {
-    background-color: #0c0c0c;
+    background-color: #061a33;
     font-family: "uni_sansheavy_caps", sans-serif;
     font-size: 24px; }
   .sidebar-menu .current-server:hover {
-    background-color: #0c0c0c; }
+    background-color: #061a33; }
   .sidebar-menu .join-server {
     background: transparent;
     border: 1px dashed rgba(255, 255, 255, 0.4);
@@ -569,7 +570,7 @@ a:focus {
   left: 52px;
   top: 60px;
   width: 240px;
-  background: #111111;
+  background: #172c48;
   height: calc(100% - 60px);
   -webkit-transform: translateX(calc(-100% - 52px));
           transform: translateX(calc(-100% - 52px));
@@ -653,7 +654,7 @@ a:focus {
     margin-top: 4px; }
 
 .friend-list {
-  background-color: #0c0c0c;
+  background-color: #172c48;
   border-radius: 6px;
   padding: 5px;
   min-height: 120px;
@@ -663,7 +664,7 @@ a:focus {
     margin: 0; }
 
 .groups-list {
-  background-color: #0c0c0c;
+  background-color: #172c48;
   border-radius: 6px;
   padding: 5px;
   min-height: 120px;
@@ -702,7 +703,7 @@ a:focus {
 
 .page-header {
   padding: 10px 15px;
-  background-color: #141414;
+  background-color: #1f324c;
   margin: 0;
   border: 0; }
   .page-header ul {
@@ -783,7 +784,7 @@ a:focus {
 
 .chat-footer {
   padding: 30px;
-  background-color: #242424; }
+  background-color: #10243E; }
   .chat-footer input {
     background: rgba(255, 255, 255, 0.05);
     border: 0;
@@ -820,14 +821,14 @@ a:focus {
   -webkit-animation: bounce-invitation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.6s;
           animation: bounce-invitation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.6s; }
   .invitation-header {
-    background-color: #242424;
+    background-color: #0d1d31;
     padding: 15px 15px;
     text-align: center;
     font-family: "uni_sansheavy_caps", sans-serif;
     font-size: 1.25em;
     border-radius: 10px 10px 0 0; }
   .invitation-info {
-    background-color: #242424;
+    background-color: #0f2239;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -994,7 +995,7 @@ a:focus {
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   width: 100%;
   max-width: 660px;
-  background-color: #242424;
+  background-color: #1c2f48;
   box-shadow: 0 0 24px rgba(17, 17, 26, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1049,6 +1050,7 @@ a:focus {
   position: relative;
   min-width: 150px;
   background-color: #12c2aa; }
+
   .modal-brand:before {
     content: "";
     position: absolute;
@@ -1313,7 +1315,7 @@ section[class].vh-25 {
   height: auto; }
 
 .bg-white {
-  background-color: #242424; }
+  background-color: #ffffff; }
 
 .inline-block {
   display: inline-block; }
