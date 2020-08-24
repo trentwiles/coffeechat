@@ -19,7 +19,7 @@
                     <% channel.participant.forEach(function(participant){ %>
                         <%if(participant._id.equals(currentUser._id)){ %>
                         <% }else if(participant.online === false){ %>
-                            <li translate="no"><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" style="-webkit-filter: grayscale(100%); filter: grayscale(100%);" /></div><del><%= participant.username %></del></a></li>
+                            <li translate="no"><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" /></div><del><%= participant.username %></del></a></li>
               
                         <% }else if(participant.online === true){ %>
                             <li translate="no"><a href="/users/<%= participant._id %>"><div class="avatar"><img class="little_avatar"  src="<%= participant.profile_picture %>" /></div><%= participant.username %></a></li>

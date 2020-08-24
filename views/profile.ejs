@@ -2,21 +2,7 @@
 
     <!-- Page Content -->
     <% include partials/channel_section %>
-    
-    <script>
-      function passreset() {
-              Swal.fire({
-        title: 'Glitchchord Safety Alert',
-        text: "This Is A Mandatory Alert, You Must View It.",
 
-        icon: 'warning',
-        confirmButtonColor: '#3085d6',
-        allowOutsideClick: false,
-        confirmButtonText: '<a href="#" data-no-defresh class="reset-pass" data-start="modal-custom" data-target="#reset-pass">View alert</a>'
-      })
-    }
-      passreset()
-</script>
     <div id="page">
         <div id="chat-list">
             <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>

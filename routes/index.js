@@ -28,20 +28,7 @@ router.get("/joystick", (req, res)=>{
     res.redirect("/users/login")
   }
 })
-router.get("/glitchchordplus", (req, res)=>{
-  if(req.user){
-    res.render('glitchchordplus',{title:"GlitchChord +"}) 
-  }else{
-    res.redirect("/users/login")
-  }
-})
-router.get("/market", (req, res)=>{
-  if(req.user){
-    res.render('marketplace',{title:"Marketplace"}) 
-  }else{
-    res.redirect("/users/login")
-  }
-})
+
 
 router.get("/discovery", (req, res)=>{
   if(req.user){
@@ -55,14 +42,6 @@ router.get("/discovery", (req, res)=>{
 router.get("/2048", (req, res)=>{
   if(req.user){
     res.render('2048',{title:"2048"}) 
-  }else{
-    res.redirect("/users/login")
-  }
-})
-
-router.get("/dino", (req, res)=>{
-  if(req.user){
-    res.render('dino',{title:"Dino game!"}) 
   }else{
     res.redirect("/users/login")
   }
