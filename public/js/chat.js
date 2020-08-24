@@ -2,7 +2,6 @@
 const socket = io();
 const chatList = $("#chat-list ul");
 const username = $("#chat-list a");
-var defresh;
 function isSiteOnline() {
   var MrChecker = new XMLHttpRequest(),
     CheckThisUrl = "//glitchchord.glitch.me";
@@ -55,7 +54,6 @@ const commands = {
     }),
   dog: args =>
     socket.emit("createdMessage", { userID, channelID, message: " ▼・ᴥ・▼" }),
-  leave: args => defresh("/users/@me", "replace"),
   tableflip: args =>
     socket.emit("createdMessage", {
       userID,
