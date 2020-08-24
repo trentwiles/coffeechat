@@ -37,7 +37,7 @@ router.get("/glitchchordplus", (req, res)=>{
 })
 router.get("/premium", (req, res)=>{
   if(req.user){
-    res.render('premium',{title:"GLitchord Premium"}) 
+    res.render('premium',{title:"Glitchord Premium"}) 
   }else{
     res.redirect("/users/login")
   }
