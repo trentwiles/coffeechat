@@ -42,6 +42,13 @@ router.get("/premium", (req, res)=>{
     res.redirect("/users/login")
   }
 })
+router.get("/partner", (req, res)=>{
+  if(req.user){
+    res.sendFile("/views/partner.ejs"); 
+  }else{
+    res.redirect("/users/login")
+  }
+})
 router.get("/market", (req, res)=>{
   if(req.user){
     res.render('marketplace',{title:"Marketplace"}) 
