@@ -35,13 +35,6 @@ router.get("/glitchchordplus", (req, res)=>{
     res.redirect("/users/login")
   }
 })
-router.get("/premium", (req, res)=>{
-  if(req.user){
-    res.render('premium',{title:"Glitchord Premium"}) 
-  }else{
-    res.redirect("/users/login")
-  }
-})
 router.get("/partner", (req, res)=>{
   if(req.user){
     res.sendFile("/views/partner.ejs"); 
