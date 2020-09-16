@@ -21,13 +21,13 @@ function isSiteOnline() {
         socket.emit("createdMessage", {
           userID,
           channelID,
-          message: "🏓 pong! site is up!"
+          message: "🏓 Pong, site is up!"
         });
       } else {
         socket.emit("createdMessage", {
           userID,
           channelID,
-          message: "x( ,site down contact admin!!!"
+          message: "Site down contact an admin."
         });
         return;
       }
@@ -90,7 +90,6 @@ socket.on("connect", function() {
   socket.emit("join", params, function(err) {
     if (err) {
       alert(err);
-      defresh("/", "push");
     } else {
       console.log("No Error");
     }
