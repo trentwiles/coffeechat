@@ -7,6 +7,7 @@ const Filter = require("bad-words");
 const filter = new Filter();
 const marked = require("marked")
 const utils = {};
+const sanitizeHtml = require('sanitize-html');
 
 marked.setOptions({
   gfm: true
@@ -16,7 +17,7 @@ utils.saveMessage = function saveMessage(io, data) {
   User.findById(ObjectID(data.userID))
     .then(rUser => {
       const msg = {
-        text: marked(filter.clean(data.message.toString().safe())),
+        text: sanitizeHtml(marked(filter.clean(data.message.toString().safe()))),
         author: rUser
       };
       Message.create(msg)
