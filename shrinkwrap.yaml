@@ -10,6 +10,7 @@ dependencies:
   jquery: 3.5.1
   jsdom: 16.3.0
   lodash: 4.17.19
+  marked: 1.1.1
   method-override: 3.0.0
   mime-types: 2.1.27
   moment: 2.27.0
@@ -2497,6 +2498,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
+  /marked/1.1.1:
+    dev: false
+    engines:
+      node: '>= 8.16.2'
+    hasBin: true
+    resolution:
+      integrity: sha512-mJzT8D2yPxoPh7h0UXkB+dBj4FykPJ2OIfxAWeIHrvoHDkFxukV/29QxoFQoPM6RLEwhIFdJpmKBlqVM3s2ZIw==
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -4450,6 +4458,7 @@ specifiers:
   jquery: ^3.5.1
   jsdom: ^16.3.0
   lodash: ^4.17.11
+  marked: ^1.1.1
   method-override: ^3.0.0
   mime-types: ^2.1.24
   moment: ^2.24.0

@@ -4,7 +4,7 @@ const chatList = $("#chat-list ul");
 const username = $("#chat-list a");
 function isSiteOnline() {
   var MrChecker = new XMLHttpRequest(),
-    CheckThisUrl = "//glitchchord.glitch.me";
+    CheckThisUrl = "//glitchchord-app.glitch.me";
 
   // Opens the file and specifies the method (get)
   // Asynchronous is true
@@ -167,9 +167,7 @@ socket.on("newMessage", function(message) {
                   .replace(/>/g, "&gt;")}</a>
                 <span class="chat-message-date">${formatedTime}</span>
                 <div class="chat-message-message">
-                        ${message.text
-                          .replace(/</g, "&lt;")
-                          .replace(/>/g, "&gt;")} 
+                        ${message.text} 
                 </div>
             </div>
     `);
