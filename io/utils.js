@@ -8,6 +8,10 @@ const filter = new Filter();
 const marked = require("marked")
 const utils = {};
 
+marked.setOptions({
+  gfm: true
+})
+
 utils.saveMessage = function saveMessage(io, data) {
   User.findById(ObjectID(data.userID))
     .then(rUser => {
