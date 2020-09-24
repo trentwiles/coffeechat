@@ -1,5 +1,4 @@
 const config = {};
-const sqreen = require('sqreen');
 
 
 config.port = process.env.PORT

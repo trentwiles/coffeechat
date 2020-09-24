@@ -8,7 +8,6 @@ const   crypto      = require("crypto");
 const   User        = require("../models/user");
 const   middleware  = require("../middleware/index");
 const   Channel     = require("../models/channel");
-const sqreen = require('sqreen');
 
 
 const       router = express.Router();

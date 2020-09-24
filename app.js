@@ -15,7 +15,6 @@ const indexRoute = require("./routes/index");
 const userRoute = require("./routes/user");
 const channelRoute = require("./routes/channel");
 const ajaxRoute = require("./routes/ajax");
-const sqreen = require('sqreen');
 const app = express();
 const server = http.createServer(app, {secure: true});
 const io = socketIO(server);

@@ -4,7 +4,6 @@ const { ObjectID } = require("mongodb");
 const User = require("../models/user");
 const Message = require("../models/message");
 const middleware = require("../middleware/index");
-const sqreen = require('sqreen');
 
 
 const router = express.Router();
