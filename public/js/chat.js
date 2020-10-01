@@ -4,7 +4,7 @@ const chatList = $("#chat-list ul");
 const username = $("#chat-list a");
 function isSiteOnline() {
   var MrChecker = new XMLHttpRequest(),
-    CheckThisUrl = "//glitchchord-app.glitch.me";
+    CheckThisUrl = "//glitchord.glitch.me";
 
   // Opens the file and specifies the method (get)
   // Asynchronous is true

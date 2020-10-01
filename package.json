@@ -38,12 +38,12 @@
     "string.prototype.startswith": "^0.2.0",
     "validator": "^10.11.0",
     "jquery": "^3.5.1",
-    "bad-words": "^3.0.3",
     "helmet": "^3.23.3",
     "express-session": "^1.17.1",
     "jsdom": "^16.3.0",
     "marked": "^1.1.1",
-    "sanitize-html": "^1.27.5"
+    "sanitize-html": "^1.27.5",
+    "bad-words": "^3.0.3"
   },
   "devDependencies": {
     "eslint": "^5.12.1",

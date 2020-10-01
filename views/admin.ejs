@@ -1,5 +1,7 @@
 <% include partials/header %>
 
+<!-- hello? -->
+
 <script src="/js/libs/jquery-3.2.1.min.js"></script>
 <script src="/js/libs/bootstrap.min.js"></script>
 <script src="/js/libs/moment.min.js"></script>
@@ -11,10 +13,17 @@
 <link href="/stylesheets/jquery.mCustomScrollbar.css" rel="stylesheet">
 <link href="/stylesheets/main.css?rev=@@hash" rel="stylesheet">
 <link href="/stylesheets/main-responsive.css?rev=@@hash" rel="stylesheet">
+<style>
+  .square {
+    padding: 17px !important;
+    height: auto !important;
+  }
+</style>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-borderless@3.2.0/borderless.min.css">
 <link rel="stylesheet" href="joystick-beta.glitch.me/style.css">
-
+<script src="/js/unload.js"></script>
+<script src="/js/secure.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 [if lt IE 9]
@@ -22,67 +31,39 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 [endif]
   <div id="page">
-        <div id="chat-list">
+    <div id="chat-list">
             <a href="/users/@me" class="user"><div class="avatar"><img src="<%= currentUser.profile_picture %>" /></div><%= currentUser.username %></a>
-            <center>
-              <a href="/">
-                <button style="color: black">
-                Return to Coffeechat
-                </button>
-              </a>
-          </center>
-            <ul class="chat-list scroll-hijack">
-            </ul>
+
+            
         </div>
+        
         <div id="profile" class="page">
             <div class="page-header clearfix">
-                <span>Coffeechat Joystick</span>
+                <span>Coffeechat Admin    </span><img src="https://cdn.glitch.com/fed07a0d-f89e-468a-b25a-f38a95ed433a%2Fverified_bot_developer.png?v=1596482570475" width=30 height=30>
                 <ul>
-                   <li style="color: #6495ed">BETA FEATURE</li>
+                   <li style="color: #6495ed">Coffeechat Moderator Controls</li>
                 </ul>
             </div>
             <div class="profile-body scroll-hijack">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <h4>Welcome to Coffeechat Joystick- the integrated gaming platform. 2048:</h4>
+                        <h4>Admin Controls</h4> 
                       <hr>
+                      
+                          <a href="/channel/join/5f059088e1ba5f1377a0b239"> 
+                  <div class="square">
+<h4>
+   <b>Account banning</b>
+                    </h4>               
+                <hr>
+                <small>
+Delete an account.              </small>
                   </div>
-                  </div>
-                          <div style="width:100000%;height:100000%;"  class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://joystick-beta.glitch.me/2048">
-                          <div class="rectangle">
-                          <h3>there was an error loading the game</h3>
-                            <p>please ensure you have flash or JavaScript enabled</p>
-                          </div>
-                        </iframe>
-                      </div>  
-              <div class="joystickbeta">
-               
-                          
-                
-                <p class="smalljoy">
-Joystick is in beta, so you might experince some bugs.
-                </p>
-
-
-                
-              </div>
-              <style>
-                    .joystickbeta{
-        background-color: #12C2AA;
-        font-color:black;
-        font-size: 50px;
-
-      }
-                .smalljoy{
-                  font-size: 30px;
-                }
-    </style>
-
-                      </div>   -->
+                      </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
