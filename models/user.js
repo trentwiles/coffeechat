@@ -73,6 +73,10 @@ const   _         = require("lodash");
         type: Boolean,
         default: false,
     },
+   devaccount: {
+     type: Boolean,
+     default: false,
+   },
       suspended: {
         type: Boolean,
         default: false,

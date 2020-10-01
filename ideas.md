@@ -14,4 +14,5 @@ Iframe the video call app so it's in the site
 
 upcoming update: privatise accounts
 
-hi!
+<span> Welcome <b><%= !!currentUser ? (currentUser.username || currentUser.email.split("@")[0]) : "You're not logged in." %></b></span>
+            
