@@ -8,13 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Coffeechat a new way to chat!">
   
-    <title>Coffeechat | <% if(title === "username"){ %>
-        <%= currentUser.username %>
-    <% }else if (title === "join"){ %>
-        Join <%= channel.channel_name %>
-    <% }else{ %>
-        <%= title %>
-    <% } %></title>
+    <title>Coffeechat</title>
+    <!-- Removed fancy title as it broke some pages because it was not defined -->
 
     <!-- Bootstrap Core CSS -->
     <link href="/stylesheets/fontawesome-all.min.css" rel="stylesheet">
