@@ -138,7 +138,9 @@ app.get("/suspended", function(req, res) {
 });
 
 app.get("/admin", function(req, res) {
-  res.render("admin");
+  res.redirect("/");
+  // Hello, Riverside Rocks here
+  // I have the admin page shut off as it is public (very bad!!)
 });
 
 
